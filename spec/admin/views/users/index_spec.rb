@@ -5,9 +5,39 @@ RSpec.describe Admin::Views::Users::Index do
   let(:template)  { Hanami::View::Template.new('apps/admin/templates/users/index.html.slim') }
   let(:view)      { described_class.new(template, exposures) }
   let(:rendered)  { view.render }
+  let(:repo)      { UserRepository.new }
 
-  it 'exposes #foo' do
-    expect(view.foo).to eq exposures.fetch(:foo)
+  describe 'users' do
+    before do
+      3.times { repo.create(name: 'Anton') }
+    end
+
+    after { repo.clear }
+
+    it 'returns all users' do
+      expect(view.users).to eq repo.all
+    end
+  end
+
+  describe '#link_to_user' do
+    let(:user) { User.new(id: 1, name: 'test') }
+
+    it 'returns link to special user' do
+      link = view.link_to_user(user)
+      expect(link.to_s).to eq '<a href="#">test</a>'
+    end
+  end
+
+  describe '#user_role' do
+    context 'when user admin' do
+      let(:user) { User.new(admin: true) }
+      it { expect(view.user_role(user)).to eq 'admin' }
+    end
+
+    context 'when user not admin' do
+      let(:user) { User.new(admin: false) }
+      it { expect(view.user_role(user)).to eq 'user' }
+    end
   end
 
   describe 'nav bar actions' do

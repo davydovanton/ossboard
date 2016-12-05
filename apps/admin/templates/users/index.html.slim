@@ -1,0 +1,20 @@
+h2 All Users
+
+table.table.pure-table.pure-table-horizontal
+  thead
+    tr
+      th.table__id #
+      th.table__name name
+      th.table__login login
+      th.table__email email
+      th.table__role role
+      th.table__created-at Created at
+  tbody
+    - users.each do |user|
+      tr
+        td = user.id
+        td = link_to_user(user)
+        td = user.login
+        td = user.email
+        td = user_role(user)
+        td = user.created_at
