@@ -18,6 +18,8 @@ html
           = link_to 'Moderation', routes.moderations_path, class: 'pure-menu-link'
         li.pure-menu-item class="#{ 'pure-menu-selected' if tasks_active? }"
           = link_to 'Tasks', routes.tasks_path, class: 'pure-menu-link'
+        li.pure-menu-item class="#{ 'pure-menu-selected' if users_active? }"
+          = link_to 'Users', routes.users_path, class: 'pure-menu-link'
 
       ul.pure-menu-list.pure-menu-list-right
         li.pure-menu-item

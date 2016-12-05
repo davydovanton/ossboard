@@ -14,5 +14,6 @@ RSpec.describe Admin::Views::Dashboard::Index do
     it { expect(view.dashboard_active?).to be true }
     it { expect(view.moderation_active?).to be false }
     it { expect(view.tasks_active?).to be false }
+    it { expect(view.users_active?).to be false }
   end
 end

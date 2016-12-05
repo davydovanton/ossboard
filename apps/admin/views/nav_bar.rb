@@ -12,6 +12,10 @@ module Admin
       def tasks_active?
         false
       end
+
+      def users_active?
+        false
+      end
     end
   end
 end

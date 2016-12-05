@@ -2,10 +2,8 @@ require_relative '../../../../apps/admin/controllers/users/index'
 
 RSpec.describe Admin::Controllers::Users::Index do
   let(:action) { described_class.new }
-  let(:params) { Hash[] }
+  let(:session) { { current_user: User.new(id: 1, admin: true) } }
+  let(:params)  { { 'rack.session' => session } }
 
-  it 'is successful' do
-    response = action.call(params)
-    expect(response[0]).to eq 200
-  end
+  it { expect(action.call(params)).to be_success }
 end

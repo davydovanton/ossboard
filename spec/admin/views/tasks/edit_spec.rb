@@ -27,5 +27,6 @@ RSpec.describe Admin::Views::Tasks::Edit do
     it { expect(view.dashboard_active?).to be false }
     it { expect(view.moderation_active?).to be false }
     it { expect(view.tasks_active?).to be true }
+    it { expect(view.users_active?).to be false }
   end
 end

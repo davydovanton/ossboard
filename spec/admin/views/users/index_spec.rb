@@ -9,4 +9,11 @@ RSpec.describe Admin::Views::Users::Index do
   it 'exposes #foo' do
     expect(view.foo).to eq exposures.fetch(:foo)
   end
+
+  describe 'nav bar actions' do
+    it { expect(view.dashboard_active?).to be false }
+    it { expect(view.moderation_active?).to be false }
+    it { expect(view.tasks_active?).to be false }
+    it { expect(view.users_active?).to be true }
+  end
 end
