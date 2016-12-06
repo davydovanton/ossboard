@@ -24,7 +24,7 @@ RSpec.describe Admin::Views::Users::Index do
 
     it 'returns link to special user' do
       link = view.link_to_user(user)
-      expect(link.to_s).to eq '<a href="#">test</a>'
+      expect(link.to_s).to eq '<a href="/admin/users/1">test</a>'
     end
   end
 

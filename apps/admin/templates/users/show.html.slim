@@ -1,0 +1,34 @@
+.show-user
+  h2.show-user__tittle user ##{user.id}
+
+  .show-user__attributes
+    .pure-g
+      .pure-u-1-8 Name
+      .pure-u-7-8 = user.name
+
+    .pure-g
+      .pure-u-1-8 Login
+      .pure-u-7-8 = user.login
+
+    .pure-g
+      .pure-u-1-8 Email
+      .pure-u-7-8 = user.email
+
+    .pure-g
+      .pure-u-1-8 Bio
+      .pure-u-7-8 = user.bio
+
+    .pure-g
+      .pure-u-1-8 Admin
+      .pure-u-7-8 = user.admin
+
+    .pure-g
+      .pure-u-1-8 Created at
+      .pure-u-7-8 = user.created_at
+
+    .pure-g
+      .pure-u-1-8 Updated at
+      .pure-u-7-8 = user.updated_at
+
+  .show-user__actions
+    = link_to 'Back', routes.users_path, class: 'pure-button'
