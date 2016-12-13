@@ -17,5 +17,24 @@ RSpec.describe Web::Controllers::Tasks::Show do
         expect(action.task).to eq task
       end
     end
+
+    context '#author' do
+      let(:author) { UserRepository.new.create(name: 'test') }
+      let(:task) { TaskRepository.new.create(title: 'test', user_id: author.id) }
+
+      it 'returns author of task' do
+        action.call(params)
+        expect(action.author).to eq author
+      end
+
+      context 'when author is empty (unreal case)' do
+        let(:task) { TaskRepository.new.create(title: 'test') }
+
+        it 'returns author of task' do
+          action.call(params)
+          expect(action.author.name).to eq 'Anonymous'
+        end
+      end
+    end
   end
 end
