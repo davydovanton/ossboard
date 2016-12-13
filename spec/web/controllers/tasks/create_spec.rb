@@ -19,7 +19,10 @@ RSpec.describe Web::Controllers::Tasks::Create do
   end
 
   describe 'when params valid' do
-    let(:params) { { task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test' }, 'rack.session' => session } }
+    let(:user) { UserRepository.new.create(name: 'test') }
+    let(:params) { { task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test', user_id: user.id }, 'rack.session' => session } }
+
+    after { UserRepository.new.clear }
 
     it { expect(action.call(params)).to redirect_to('/tasks') }
 
@@ -31,7 +34,17 @@ RSpec.describe Web::Controllers::Tasks::Create do
       expect(task.md_body).to eq 'This is *bongos*, indeed.'
       expect(task.body).to eq "<p>This is <em>bongos</em>, indeed.</p>\n"
     end
+  end
 
+  describe 'when user is not login' do
+    let(:params) { { task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test', user_id: nil }, 'rack.session' => session } }
+
+    it { expect(action.call(params)).to have_http_status(200) }
+    it { expect(action.call(params)).to match_in_body('User Id must be filled') }
+
+    it 'does not create new task' do
+      expect { action.call(params) }.to change { repo.all.size }.by(0)
+    end
   end
 
   describe 'when params invalid' do

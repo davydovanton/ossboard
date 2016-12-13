@@ -9,6 +9,7 @@ module Web::Controllers::Tasks
         required(:title).filled(:str?)
         required(:md_body).filled(:str?)
         required(:lang).filled(:str?)
+        required(:user_id).filled
       end
     end
 

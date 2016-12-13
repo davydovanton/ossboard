@@ -4,6 +4,8 @@ module Web::Views::Tasks
 
     def form
       form_for task_form, id: 'task-form', class: 'task-form pure-form' do
+        hidden_field :user_id, value: current_user.id
+
         div class: 'input' do
           text_field :title, value: task.title, placeholder: 'Title'
         end
