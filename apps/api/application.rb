@@ -17,8 +17,7 @@ module Api
       # When you add new directories, remember to add them here.
       #
       load_paths << [
-        'controllers',
-        'views'
+        'controllers'
       ]
 
       # Handle exceptions with HTTP statuses (true) or don't catch them (false).
@@ -95,7 +94,7 @@ module Api
       # Argument: Symbol, which represent the format of the mime type (only `:json` is supported)
       #           Object, the parser
       #
-      # body_parsers :json
+      body_parsers :json
 
       # When it's true and the router receives a non-encrypted request (http),
       # it redirects to the secure equivalent resource (https). Default disabled.
@@ -108,49 +107,49 @@ module Api
 
       # The layout to be used by all views
       #
-      layout :application # It will load Api::Views::ApplicationLayout
+      # layout :application # It will load Api::Views::ApplicationLayout
 
       # The relative path to templates
       #
-      templates 'templates'
+      # templates 'templates'
 
       ##
       # ASSETS
       #
-      assets do
-        # JavaScript compressor
-        #
-        # Supported engines:
-        #
-        #   * :builtin
-        #   * :uglifier
-        #   * :yui
-        #   * :closure
-        #
-        # See: http://hanamirb.org/guides/assets/compressors
-        #
-        # In order to skip JavaScript compression comment the following line
-        javascript_compressor :builtin
-
-        # Stylesheet compressor
-        #
-        # Supported engines:
-        #
-        #   * :builtin
-        #   * :yui
-        #   * :sass
-        #
-        # See: http://hanamirb.org/guides/assets/compressors
-        #
-        # In order to skip stylesheet compression comment the following line
-        stylesheet_compressor :builtin
-
-        # Specify sources for assets
-        #
-        sources << [
-          'assets'
-        ]
-      end
+      # assets do
+      #   # JavaScript compressor
+      #   #
+      #   # Supported engines:
+      #   #
+      #   #   * :builtin
+      #   #   * :uglifier
+      #   #   * :yui
+      #   #   * :closure
+      #   #
+      #   # See: http://hanamirb.org/guides/assets/compressors
+      #   #
+      #   # In order to skip JavaScript compression comment the following line
+      #   javascript_compressor :builtin
+      #
+      #   # Stylesheet compressor
+      #   #
+      #   # Supported engines:
+      #   #
+      #   #   * :builtin
+      #   #   * :yui
+      #   #   * :sass
+      #   #
+      #   # See: http://hanamirb.org/guides/assets/compressors
+      #   #
+      #   # In order to skip stylesheet compression comment the following line
+      #   stylesheet_compressor :builtin
+      #
+      #   # Specify sources for assets
+      #   #
+      #   sources << [
+      #     'assets'
+      #   ]
+      # end
 
       ##
       # SECURITY
@@ -259,10 +258,10 @@ module Api
       # This is useful for sharing common functionality
       #
       # See: http://www.rubydoc.info/gems/hanami-view#Configuration
-      view.prepare do
-        include Hanami::Helpers
-        include Api::Assets::Helpers
-      end
+      # view.prepare do
+      #   include Hanami::Helpers
+      #   # include Api::Assets::Helpers
+      # end
     end
 
     ##
