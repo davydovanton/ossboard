@@ -40,6 +40,8 @@ group :test do
   gem 'rspec-hanami', github: 'davydovanton/rspec-hanami'
   gem 'capybara'
   gem 'simplecov', require: false
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :production do
