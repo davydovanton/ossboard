@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/hanami/hanami/issues/663
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 19 Dec 2016 23:47:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '58'
+      X-Ratelimit-Reset:
+      - '1482194774'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"5ca5f2b96c170ac95ed2c96f3d832bcf"
+      Last-Modified:
+      - Mon, 19 Dec 2016 16:29:12 GMT
+      X-Github-Media-Type:
+      - github.v3
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 13d09b732ebe76f892093130dc088652
+      X-Github-Request-Id:
+      - 6DFC4BDC:73B8:60A0586:585871A4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/hanami/hanami/issues/663","repository_url":"https://api.github.com/repos/hanami/hanami","labels_url":"https://api.github.com/repos/hanami/hanami/issues/663/labels{/name}","comments_url":"https://api.github.com/repos/hanami/hanami/issues/663/comments","events_url":"https://api.github.com/repos/hanami/hanami/issues/663/events","html_url":"https://github.com/hanami/hanami/issues/663","id":188814461,"number":663,"title":"Format
+        resolving and Template lookup","user":{"login":"mereghost","id":10281,"avatar_url":"https://avatars.githubusercontent.com/u/10281?v=3","gravatar_id":"","url":"https://api.github.com/users/mereghost","html_url":"https://github.com/mereghost","followers_url":"https://api.github.com/users/mereghost/followers","following_url":"https://api.github.com/users/mereghost/following{/other_user}","gists_url":"https://api.github.com/users/mereghost/gists{/gist_id}","starred_url":"https://api.github.com/users/mereghost/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mereghost/subscriptions","organizations_url":"https://api.github.com/users/mereghost/orgs","repos_url":"https://api.github.com/users/mereghost/repos","events_url":"https://api.github.com/users/mereghost/events{/privacy}","received_events_url":"https://api.github.com/users/mereghost/received_events","type":"User","site_admin":false},"labels":[{"id":51404909,"url":"https://api.github.com/repos/hanami/hanami/labels/bug","name":"bug","color":"fc2929","default":true}],"state":"open","locked":false,"assignee":{"login":"jodosha","id":5089,"avatar_url":"https://avatars.githubusercontent.com/u/5089?v=3","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false},"assignees":[{"login":"jodosha","id":5089,"avatar_url":"https://avatars.githubusercontent.com/u/5089?v=3","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false}],"milestone":{"url":"https://api.github.com/repos/hanami/hanami/milestones/18","html_url":"https://github.com/hanami/hanami/milestone/18","labels_url":"https://api.github.com/repos/hanami/hanami/milestones/18/labels","id":2129213,"number":18,"title":"v1.0.0.beta1","description":"","creator":{"login":"jodosha","id":5089,"avatar_url":"https://avatars.githubusercontent.com/u/5089?v=3","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false},"open_issues":2,"closed_issues":1,"state":"open","created_at":"2016-11-11T11:59:51Z","updated_at":"2016-12-19T16:29:12Z","due_on":null,"closed_at":null},"comments":8,"created_at":"2016-11-11T17:51:18Z","updated_at":"2016-12-05T16:24:42Z","closed_at":null,"body":"As
+        was reported on Gitter, requests that are made with a `Content-Type` of `text/plain`
+        get resolved to the `:conf` format and consequently a `.txt` template is never
+        used.\r\n\r\nThat happens because we use `Rack::Mime::MIME_TYPES.key(mime_type)`
+        [(see here)](https://github.com/hanami/controller/blob/master/lib/hanami/action/mime.rb#L486)
+        which returns only the first match. The same problem can happen for a bunch
+        of other types (around 40) and we never detected this problem because we skipped
+        those cases on purpose on the tests [(see here)](https://github.com/hanami/controller/blob/master/test/action/format_test.rb#L85)\r\n\r\nMaking
+        it work is kinda of a huge change. Why? For that to work we''d need to make
+        `Hanami::Action#format` an `Array` or make `Hanami::View` (specially the template
+        finder) MIME aware and make it look for the first template file it finds with
+        the possible extensions.\r\n\r\nThat would warrant changes in `view`, `controller`
+        and possibly `hanami`, and that brings me here. I''m willing to work at it
+        but I''d like some input from the hanami members on the best way to tackle
+        this.","closed_by":null}'
+    http_version: 
+  recorded_at: Mon, 19 Dec 2016 23:47:48 GMT
+recorded_with: VCR 3.0.3

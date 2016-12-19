@@ -20,8 +20,8 @@ module Api::Controllers::Issue
   private
 
     def match_host(issue_url)
-      GitHostMatcher.(params[:issue_url]) do |m|
-        m.success { |p| p }
+      GitHostMatcher.(issue_url) do |m|
+        m.success(:github) { |issue_data| GithubIssueRequester.(issue_data) }
         m.failure { |p| p }
       end
     end
