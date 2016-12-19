@@ -9,12 +9,21 @@ module Api::Controllers::Issue
     # curl -i "https://api.github.com/repos/hanami/hanami/issues/663"
     def call(params)
       response = if params.valid?
-        { hello: :world }
+        match_host(params[:issue_url])
       else
         { error: 'empty url' }
       end
 
       self.body = JSON.generate(response)
+    end
+
+  private
+
+    def match_host(issue_url)
+      GitHostMatcher.(params[:issue_url]) do |m|
+        m.success { |p| p }
+        m.failure { |p| p }
+      end
     end
   end
 end

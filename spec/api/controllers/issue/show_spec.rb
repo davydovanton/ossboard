@@ -17,7 +17,12 @@ RSpec.describe Api::Controllers::Issue::Show do
   end
 
   context 'when issue url is valid' do
+    let(:params) { { issue_url: 'https://github.com/hanami/hanami/issues/663' } }
+    it { expect(action.call(params)).to match_in_body(/\A{"host":"gitub","org":"hanami","repo":"hanami","issue":"663"}\z/) }
+  end
+
+  context 'when issue url is invalid' do
     let(:params) { { issue_url: 'https://api.github.com/repos/hanami/hanami/issues/663' } }
-    it { expect(action.call(params)).to match_in_body(/\A{"hello":"world"}\z/) }
+    it { expect(action.call(params)).to match_in_body(/\A{"error":"invalid url"}\z/) }
   end
 end

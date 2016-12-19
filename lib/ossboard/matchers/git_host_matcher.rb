@@ -12,7 +12,7 @@ success_case = Dry::Matcher::Case.new(
 
 failure_case = Dry::Matcher::Case.new(
   match: -> value { true },
-  resolve: -> value { { error: :invalid } }
+  resolve: -> value { { error: 'invalid url' } }
 )
 
 GitHostMatcher = Dry::Matcher.new(success: success_case, failure: failure_case)
