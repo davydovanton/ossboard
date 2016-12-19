@@ -21,6 +21,8 @@ gem 'slim'
 gem 'hanami-webpack', github: 'samuelsimoes/hanami-webpack'
 gem 'sass'
 
+gem 'dry-matcher'
+
 group :development do
   # Code reloading
   # See: http://hanamirb.org/guides/projects/code-reloading
