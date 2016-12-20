@@ -1,1 +1,1 @@
-get '/issue/:id', to: 'issue#show'
+post '/issue', to: 'issue#show'
