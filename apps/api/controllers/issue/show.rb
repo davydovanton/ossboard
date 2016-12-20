@@ -6,14 +6,8 @@ module Api::Controllers::Issue
       required(:issue_url).filled(:str?)
     end
 
-    # curl -i "https://api.github.com/repos/hanami/hanami/issues/663"
     def call(params)
-      response = if params.valid?
-        match_host(params[:issue_url])
-      else
-        { error: 'empty url' }
-      end
-
+      response = params.valid? ? match_host(params[:issue_url]) : { error: 'empty url' }
       self.body = JSON.generate(response)
     end
 
@@ -22,7 +16,8 @@ module Api::Controllers::Issue
     def match_host(issue_url)
       GitHostMatcher.(issue_url) do |m|
         m.success(:github) { |issue_data| GithubIssueRequester.(issue_data) }
-        m.failure { |p| p }
+        m.success(:gitlab) { { error: 'Sorry, but gitlab is not supported now' } }
+        m.failure { { error: 'invalid url' } }
       end
     end
   end

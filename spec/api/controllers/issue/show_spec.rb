@@ -31,4 +31,9 @@ RSpec.describe Api::Controllers::Issue::Show, :vcr do
     let(:params) { { issue_url: 'https://api.github.com/repos/hanami/hanami/issues/663' } }
     it { expect(subject).to match_in_body(/\A{"error":"invalid url"}\z/) }
   end
+
+  context 'when issue url is valid gitlab' do
+    let(:params) { { issue_url: 'https://gitlab.com/hanami/hanami/issues/663' } }
+    it { expect(subject).to match_in_body(/\A{"error":"Sorry, but gitlab is not supported now"}\z/) }
+  end
 end

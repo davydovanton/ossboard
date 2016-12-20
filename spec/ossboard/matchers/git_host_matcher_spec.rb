@@ -2,6 +2,7 @@ RSpec.describe GitHostMatcher do
   subject do
     GitHostMatcher.(issue_url) do |m|
       m.success(:github){ |params| params }
+      m.success(:gitlab){ |params| params }
       m.failure { |params| params }
     end
   end
@@ -16,8 +17,13 @@ RSpec.describe GitHostMatcher do
     it { expect(subject).to eq(org: 'davydovanton', repo: 'sidekiq-statistic', issue: '75') }
   end
 
-  context 'when string is github issue' do
+  context 'when string is invalid github issue' do
     let(:issue_url) { 'https://api.github.com/repos/hanami/hanami/issues/663' }
-    it { expect(subject).to eq(error: 'invalid url') }
+    it { expect(subject).to eq(nil) }
+  end
+
+  context 'when string is gitlab issue' do
+    let(:issue_url) { 'https://gitlab.com/hanami/hanami/issues/663' }
+    it { expect(subject).to eq(org: 'hanami', repo: 'hanami', issue: '663') }
   end
 end
