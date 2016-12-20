@@ -1,6 +1,6 @@
 require "dry-matcher"
 
-GITHUB_ISSUE_REGEXP = %r[github\.com/(\w+)/(\w+)/issues/(\d+)].freeze
+GITHUB_ISSUE_REGEXP = %r[github\.com/([\w-]+)/([\w-]+)/issues/(\d+)].freeze
 
 success_case = Dry::Matcher::Case.new(
   match:   -> value, *pattern { pattern.include?(:github) && value.match(GITHUB_ISSUE_REGEXP) },
