@@ -49,22 +49,22 @@ module Web::Views::Tasks
           end
         end
 
-        div class: 'input task-body', id: "task-body" do
-          div class: 'pure-u-1 task-body__write', 'v-if' => "write" do
-            div(class: 'task-body__title') do
-              label(:md_body) { text 'Description' }
+        div class: 'input task-description', id: "task-preview-body" do
+          div class: 'pure-u-1 task-description__write', 'v-if' => "write" do
+            div(class: 'task-description__title') do
+              label(:description) { text 'Description' }
               button 'Preview', type: :button, 'v-on:click' => 'displayPreview', class: 'btn btn-default pure-menu-link'
             end
 
-            text_area :md_body, task.md_body, 'v-model' => "taskBody"
-            div(class: 'task-form__body-tip') do
+            text_area :description, task.description, 'v-model' => "taskDescription"
+            div(class: 'task-form__description-tip') do
               em '* you can use markdown syntax'
             end
           end
 
-          div class: 'pure-u-1 task-body__preview', 'v-if' => "preview" do
-            div(class: 'task-body__title') do
-              label(:md_body) { text 'Description' }
+          div class: 'pure-u-1 task-description__preview', 'v-if' => "preview" do
+            div(class: 'task-description__title') do
+              label(:description) { text 'Description' }
               button 'Write', type: :button, 'v-on:click' => 'displayForm', class: 'btn btn-default pure-menu-link'
             end
 
@@ -79,8 +79,8 @@ module Web::Views::Tasks
               div class: "f_circleG", id: "frotateG_08"
             end
 
-            text_area :md_body, style: "display:none;", 'v-model' => "taskBody"
-            div class: 'task-body__preview', id: 'previewed-text', 'v-html' => "rawBody" do
+            text_area :description, style: "display:none;", 'v-model' => "taskDescription"
+            div class: 'task-description__preview', id: 'previewed-text', 'v-html' => "rawBody" do
             end
           end
         end

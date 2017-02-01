@@ -86,7 +86,7 @@ new Vue({
           document.getElementById('task-title').value = data.title
           document.getElementById('task-repository-name').value = data.repository_name
           document.getElementById('task-issue-url').value = data.html_url
-          document.getElementById('task-md-body').value = data.body
+          document.getElementById('task-description').value = data.description
           document.getElementById('task-lang').value = data.lang
           self.showModal = false
         } else {
@@ -122,16 +122,16 @@ if (agreementChackbox) {
   }
 }
 
-if (document.getElementById("task-body")) {
+if (document.getElementById("task-preview-body")) {
   new Vue({
-    el: '#task-body',
+    el: '#task-preview-body',
     data: {
       write: true,
       preview: false,
       loadPreview: false,
       xhr: new XMLHttpRequest(),
       previewedText: document.getElementById('previewed-text'),
-      taskBody: '',
+      taskDescription: '',
       rawBody: ''
     },
     methods: {
@@ -139,11 +139,11 @@ if (document.getElementById("task-body")) {
         this.write = true
         this.preview = false
         this.rawBody = ''
-        this.taskBody = document.getElementById('task-md-body').value
+        this.taskDescription = document.getElementById('task-description').value
       },
 
       displayPreview: function () {
-        this.taskBody = document.getElementById('task-md-body').value
+        this.taskDescription = document.getElementById('task-description').value
         this.write = false
         this.preview = true
         this.loadPreview = true
@@ -161,7 +161,7 @@ if (document.getElementById("task-body")) {
           self.rawBody = data.text
         };
 
-        this.xhr.send(JSON.stringify({md_text: this.taskBody}));
+        this.xhr.send(JSON.stringify({md_text: this.taskDescription}));
       }
     }
   })

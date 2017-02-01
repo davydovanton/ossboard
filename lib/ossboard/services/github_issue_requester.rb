@@ -9,7 +9,7 @@ class GithubIssueRequester
     issue_response = get_response(GITHUB_ISSUE_API_URL % params)
     issue_data = JSON.parse(issue_response.body)
 
-    data = { html_url: issue_data['html_url'], title: issue_data['title'], body: issue_data['body'] }
+    data = { html_url: issue_data['html_url'], title: issue_data['title'], description: issue_data['body'] }
 
     return ERROR_HASH unless issue_response.is_a?(Net::HTTPSuccess)
 

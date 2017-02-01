@@ -8,8 +8,8 @@ module Web::Controllers::Tasks
       required(:id).filled
 
       required(:task).schema do
+        required(:description).filled(:str?)
         required(:title).filled(:str?)
-        required(:md_body).filled(:str?)
         required(:lang).filled(:str?)
         required(:user_id).filled
         optional(:issue_url).maybe(:str?)
@@ -46,7 +46,7 @@ module Web::Controllers::Tasks
 
     def task_params(params)
       task_params = params[:task]
-      task_params[:body] = Markdown.parse(task_params[:md_body])
+      task_params[:body] = Markdown.parse(task_params[:description])
       task_params
     end
   end

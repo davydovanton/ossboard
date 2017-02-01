@@ -20,7 +20,7 @@ class GitlabIssueRequester
     data = {
       html_url: issue_data['web_url'],
       title: issue_data['title'],
-      body: issue_data['description']
+      description: issue_data['description']
     }
 
     data[:repository_name] = repo_data['name'] if repo_response.is_a?(Net::HTTPSuccess)

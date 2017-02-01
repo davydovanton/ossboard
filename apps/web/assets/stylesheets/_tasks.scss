@@ -460,7 +460,7 @@
 }
 
 .task-form {
-  .task-form__body-tip {
+  .task-form__description-tip {
     text-align: right;
     font-size: 16px;
   }
@@ -478,8 +478,8 @@
   }
 }
 
-.task-body {
-  .task-body__title {
+.task-description {
+  .task-description__title {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -499,12 +499,12 @@
     }
   }
 
-  .task-body__preview {
+  .task-description__preview {
     text-align: left;
     white-space: normal;
   }
 
-  .task-body__menu {
+  .task-description__menu {
     padding: .5em 0 0 0;
     width: 440px;
     margin: 0 -10px -7px;

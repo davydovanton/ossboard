@@ -8,7 +8,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
   after { repo.clear }
 
   describe 'when user in not authenticated' do
-    let(:params) { { task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test', complexity: 'easy' } } }
+    let(:params) { { task: { title: 'test', description: 'This is *bongos*, indeed.', lang: 'test', complexity: 'easy' } } }
 
     it { expect(action.call(params)).to have_http_status(200) }
 
@@ -24,7 +24,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
       {
         title: 'test',
         repository_name: 'Acme-Project',
-        md_body: 'This is *bongos*, indeed.',
+        description: 'This is *bongos*, indeed.',
         lang: 'test',
         complexity: 'easy',
         time_estimate: 'few days',
@@ -54,7 +54,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
       task = repo.last
       expect(task.title).to eq 'test'
       expect(task.repository_name).to eq 'Acme-Project'
-      expect(task.md_body).to eq 'This is *bongos*, indeed.'
+      expect(task.description).to eq 'This is *bongos*, indeed.'
       expect(task.body).to eq "<p>This is <em>bongos</em>, indeed.</p>\n"
       expect(task.issue_url).to eq 'github.com/issue/1'
       expect(task.status).to eq 'in progress'
@@ -66,7 +66,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
         {
           title: 'test',
           repository_name: '',
-          md_body: 'This is *bongos*, indeed.',
+          description: 'This is *bongos*, indeed.',
           lang: 'test',
           complexity: 'easy',
           time_estimate: 'few days',
@@ -81,7 +81,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
         task = repo.last
         expect(task.title).to eq 'test'
         expect(task.repository_name).to eq nil
-        expect(task.md_body).to eq 'This is *bongos*, indeed.'
+        expect(task.description).to eq 'This is *bongos*, indeed.'
         expect(task.body).to eq "<p>This is <em>bongos</em>, indeed.</p>\n"
         expect(task.issue_url).to eq nil
         expect(task.complexity).to eq 'easy'
@@ -93,7 +93,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
   end
 
   describe 'when user is not login' do
-    let(:params) { { task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test', complexity: 'easy', user_id: nil }, 'rack.session' => session } }
+    let(:params) { { task: { title: 'test', description: 'This is *bongos*, indeed.', lang: 'test', complexity: 'easy', user_id: nil }, 'rack.session' => session } }
 
     it { expect(action.call(params)).to have_http_status(200) }
     it { expect(action.call(params)).to match_in_body('User Id must be filled') }
@@ -104,11 +104,11 @@ RSpec.describe Web::Controllers::Tasks::Create do
   end
 
   describe 'when params invalid' do
-    let(:params) { { task: { 'rack.session' => session } } }
+    let(:params) { { task: {title: '', description: ''}, 'rack.session' => session } }
 
     it { expect(action.call(params)).to have_http_status(200) }
-    it { expect(action.call(params)).to match_in_body('Title is missing') }
-    it { expect(action.call(params)).to match_in_body(/Body is missing/) }
+    it { expect(action.call(params)).to match_in_body('Title must be filled') }
+    it { expect(action.call(params)).to match_in_body('Description must be filled') }
 
     it 'does not create new task' do
       expect { action.call(params) }.to change { repo.all.size }.by(0)
