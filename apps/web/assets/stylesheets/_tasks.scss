@@ -72,19 +72,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    .pure-menu-horizontal {
-      width: 680px;
+    .tasks__status-selector {
+      margin: auto 0;
 
-      a {
-        border-radius: 0;
-      }
-    }
+      select {
+        padding: 0;
+        margin: 0;
+        border: 1px solid #ccc;
+        width: 120px;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: #fff;
 
-    .pure-menu-selected {
-      background-color: #ccc;
-
-      a {
-        color: #000 !important;
+        background: #fff ;
       }
     }
 

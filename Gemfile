@@ -33,6 +33,8 @@ gem 'sidekiq'
 gem 'newrelic-hanami', github: 'artemeff/newrelic-hanami'
 gem 'secure_headers'
 
+gem 'twitter'
+
 group :development do
   # Code reloading
   # See: http://hanamirb.org/guides/projects/code-reloading

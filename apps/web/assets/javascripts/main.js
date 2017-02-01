@@ -38,25 +38,6 @@ window.onload = function () {
   var share = new ShareButton('.task__share-js', config);
 }
 
-var for_dev = new Vue({
-  el: '#for-dev',
-  data: {
-    forDevelopers: true,
-    forMaintainers: false
-  },
-  methods: {
-    displayForDevelopers: function () {
-      this.forDevelopers = true
-      this.forMaintainers = false
-    },
-
-    displayForMaintainers: function () {
-      this.forDevelopers = false
-      this.forMaintainers = true
-    }
-  }
-})
-
 Vue.component('modal', {
   template: '#modal-template',
 })
@@ -162,6 +143,38 @@ if (document.getElementById("task-preview-body")) {
         };
 
         this.xhr.send(JSON.stringify({md_text: this.taskDescription}));
+      }
+    }
+  })
+}
+
+if (document.getElementById("js-switcher")) {
+  new Vue({
+    el: '#js-switcher',
+    data: {
+      firstCase: true,
+      secondCase: false
+    },
+    methods: {
+      displayFirstCase: function () {
+        this.firstCase = true
+        this.secondCase = false
+      },
+
+      displaySecondCase: function () {
+        this.firstCase = false
+        this.secondCase = true
+      }
+    }
+  })
+}
+
+if (document.getElementById("task-status-select")) {
+  new Vue({
+    el: '#task-status-select',
+    methods: {
+      changeItem(event) {
+        window.location = "/tasks?status=" + event.target.value;
       }
     }
   })

@@ -1,5 +1,5 @@
 # OSS Board
-[![Build Status](https://travis-ci.org/davydovanton/ossboard.svg?branch=master)](https://travis-ci.org/davydovanton/ossboard)
+[![Build Status](https://travis-ci.org/ossboard-org/ossboard.svg?branch=master)](https://travis-ci.org/ossboard-org/ossboard)
 
 Simple way to connect developers and oss maintainers.
 

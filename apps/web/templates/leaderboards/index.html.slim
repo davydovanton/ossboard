@@ -1,0 +1,30 @@
+#js-switcher.leaderboard.main-content
+  .leaderboard__title
+    svg height="32px" version="1.1" viewbox=("84 0 32 32") width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      g#ic_local_bar_black_24px-copy fill="none" fill-rule="evenodd" stroke="none" stroke-width="1" transform="translate(84.000000, 0.000000)"
+        g#Group
+          polygon#Shape points=("0 0 32 0 32 32 0 32")
+          path#Combined-Shape d="M24,5.66666667 C26.209139,5.66666667 28,7.45752767 28,9.66666667 C28,11.8758057 26.209139,13.6666667 24,13.6666667 L24,14.9975267 C24,15.544239 23.6159042,16.2304575 23.1420979,16.5147412 L17.3333333,20 L17.3333333,25.3333333 L24,25.3333333 L24,28 L8,28 L8,25.3333333 L14.6666667,25.3333333 L14.6666667,20 L8.85790207,16.5147412 C8.37753026,16.2265182 8,15.5511774 8,14.9975267 L8,13.6666667 C5.790861,13.6666667 4,11.8758057 4,9.66666667 C4,7.45752767 5.790861,5.66666667 8,5.66666667 L8,4 L24,4 L24,5.66666667 Z M8,7.84848485 C6.99584591,7.84848485 6.18181818,8.66251258 6.18181818,9.66666667 C6.18181818,10.6708208 6.99584591,11.4848485 8,11.4848485 L8,7.84848485 Z M24,7.84848485 C25.0041541,7.84848485 25.8181818,8.66251258 25.8181818,9.66666667 C25.8181818,10.6708208 25.0041541,11.4848485 24,11.4848485 L24,7.84848485 Z" fill="#FBC02D"
+
+    h2 Leaderboard
+
+  .leaderboard__switch
+    .leaderboard__switch-item
+      button.leaderboard__switch-item-link v-bind:class="{ 'leaderboard__switch-item-link_active': firstCase }"  v-on:click="displayFirstCase" Top contributors
+    .leaderboard__switch-item
+      button.leaderboard__switch-item-link v-bind:class="{ 'leaderboard__switch-item-link_active': secondCase }"  v-on:click="displaySecondCase" Top maintainers
+
+  .leaderboard__list
+    .leaderboard__contributors v-if="firstCase"
+      - users.each_with_index do |user, i|
+        .user-row
+          .user-row__rank = i + 1
+          = user_information(user)
+          .user-row__points 0
+
+    .leaderboard__maintainers v-if="secondCase"
+      - users.each_with_index do |user, i|
+        .user-row
+          .user-row__rank = i + 1
+          = user_information(user)
+          .user-row__points 100

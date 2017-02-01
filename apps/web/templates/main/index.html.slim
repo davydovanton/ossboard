@@ -7,7 +7,7 @@
     li.promo-buttons-item
       = link_to 'Post a task', routes.new_task_path, class: 'promo-buttons-item__button promo-buttons-item__button_green'
 
-.whatisthis id="for-dev"
+.whatisthis id="js-switcher"
   h2.whatisthis__header What is this?
   p.whatisthis__description
     | We&nbsp;know that OSS is&nbsp;hard. It&rsquo;s hard for new developers to&nbsp;start
@@ -17,11 +17,11 @@
 
   .whatisthis-choice
     .whatisthis-choice-item
-      button.whatisthis-choice-item__link v-bind:class="{ 'whatisthis-choice-item__link_active': forDevelopers }"  v-on:click="displayForDevelopers" I want to contribute
+      button.whatisthis-choice-item__link v-bind:class="{ 'whatisthis-choice-item__link_active': firstCase }"  v-on:click="displayFirstCase" I want to contribute
     .whatisthis-choice-item
-      button.whatisthis-choice-item__link v-bind:class="{ 'whatisthis-choice-item__link_active': forMaintainers }" v-on:click="displayForMaintainers" I'm a mantainer
+      button.whatisthis-choice-item__link v-bind:class="{ 'whatisthis-choice-item__link_active': secondCase }" v-on:click="displaySecondCase" I'm a mantainer
 
-  ul.whatisthis-features v-if="forDevelopers"
+  ul.whatisthis-features v-if="firstCase"
     li.whatisthis-features-item
       h3.whatisthis-features-item__header Help Community
       p.whatisthis-features-item__text Some developers don't have enough time and&nbsp;effort to&nbsp;support&nbsp;it. Help them and they will ❤️ you.
@@ -34,7 +34,7 @@
         p Contributing to&nbsp;open source projects is&nbsp;also a&nbsp;great way to&nbsp;build your profile in&nbsp;the&nbsp;community and&nbsp;improve your CV.
         p It’s really easy to&nbsp;get started. Even small contributions can&nbsp;be really valuable to&nbsp;a&nbsp;project.
 
-  ul.whatisthis-features v-if="forMaintainers"
+  ul.whatisthis-features v-if="secondCase"
     li.whatisthis-features-item
       h3.whatisthis-features-item__header Manage your issues
       p.whatisthis-features-item__text Save your time for&nbsp;most important problems. Be&nbsp;open and&nbsp;you will get&nbsp;help.

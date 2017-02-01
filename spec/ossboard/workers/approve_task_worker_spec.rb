@@ -11,5 +11,10 @@ RSpec.describe ApproveTaskWorker do
     it 'sends email to all admins' do
       expect{ subject.perform(task.id) }.to change { Hanami::Mailer.deliveries.size }.by(1)
     end
+
+    it 'calls approved task twitter services' do
+      expect(TaskTwitter).to receive(:call).with(task)
+      subject.perform(task.id)
+    end
   end
 end

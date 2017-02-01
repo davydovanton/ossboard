@@ -1,0 +1,137 @@
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (max-width: 48em) {
+  .leaderboard {
+    width: 100%;
+  }
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 48em) {
+  .leaderboard {
+    width: 700px;
+  }
+}
+
+.leaderboard {
+  margin: 2em auto;
+
+  .leaderboard__title {
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .leaderboard__switch {
+    font-size: 0;
+    text-align: center;
+
+    .leaderboard__switch-item {
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0.6em 0;
+    }
+
+    button.leaderboard__switch-item-link {
+    }
+
+    .leaderboard__switch-item-link,
+    .leaderboard__switch-item-link:link,
+    .leaderboard__switch-item-link:active,
+    .leaderboard__switch-item-link:visited {
+      cursor: pointer;
+      background: none;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      font-size: 0.7em;
+      line-height: 3.28;
+      text-decoration: none;
+      border: 1px solid #214CFD;
+      color: #214CFD;
+      width: 10.5em;
+    }
+    .leaderboard__switch-item-link:hover {
+      background: #FD2121;
+      border-color: #FD2121;
+      color: #fff;
+    }
+    .leaderboard__switch-item-link_active,
+    .leaderboard__switch-item-link_active:hover {
+      background: #214CFD;
+      border-color: #214CFD;
+      color: #fff;
+      cursor: default;
+    }
+    .leaderboard__switch-item:first-child .leaderboard__switch-item-link {
+      border-radius: 100px 0 0 100px;
+    }
+    .leaderboard__switch-item:last-child .leaderboard__switch-item-link {
+      border-radius: 0 100px 100px 0;
+    }
+  }
+
+  .leaderboard__list {
+    background: #FFFFFF;
+    box-shadow: 0 0 1px 0 rgba(43, 59, 124, 0.18), 0 1px 3px 0 rgba(43, 59, 125, 0.14);
+    border-radius: 2px;
+    margin: 20px 0;
+
+    a:link,
+    a:active,
+    a:visited {
+      color: #214CFD;
+    }
+
+    .leaderboard__contributors {
+    }
+
+    .leaderboard__maintainers {
+    }
+  }
+
+  .user-row {
+    padding: 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:hover {
+      background: #244FFE;
+      color: #fff;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .user-row__rank {
+      margin-right: 1em;
+    }
+
+    .user-row__name {
+      flex-grow: 1;
+    }
+
+    .user-row__avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 100px;
+      margin: 0px 0.4em -5px 0;
+    }
+  }
+}
+

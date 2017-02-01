@@ -14,10 +14,6 @@ module Web::Views::Tasks
       link_to 'POST A TASK', routes.new_task_path, class: 'link'
     end
 
-    def status_selected_class(status)
-      'pure-menu-selected' if tasks_status == status
-    end
-
     def task_statuses
       {
         'in progress' => 'Open',
@@ -39,6 +35,13 @@ module Web::Views::Tasks
       html.span(class: "level level-#{task.complexity}") { text(task.complexity.upcase) }
     end
 
+    def select_tasks_by_status
+      html.select(id: "task-status-select", '@change': "changeItem($event)") do
+        task_statuses.each { |status, text| option(text, value: status, selected: status == tasks_status) }
+        option('On moderation', value: "moderation", selected: tasks_status == 'moderation') if current_user.registred?
+      end
+    end
+
     # TODO: Tests
     def author_information(author, task)
       html.div(class: 'task-item__author') do
@@ -48,6 +51,7 @@ module Web::Views::Tasks
           text(author.name || author.login)
         end
         text(RelativeTime.in_words(task.created_at))
+        text(" • #{task.lang}")
       end
     end
   end

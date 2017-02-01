@@ -13,7 +13,7 @@
 
       .task__time-estimate
         = link_to_original_issue
-        | Estimated time: #{task.time_estimate}
+        | Estimated time: #{task.time_estimate} • #{task.lang}
 
     .task__complexity
       = complexity_label

@@ -27,12 +27,6 @@ RSpec.describe Web::Views::Tasks::Index do
     it { expect(view.task_statuses).to eq('in progress' => 'Open', 'assigned' => 'Assigned', 'closed' => 'Closed', 'done' => 'Finished') }
   end
 
-  describe '#status_selected_class' do
-    let(:exposures) { { params: { status: 'test' } } }
-    it { expect(view.status_selected_class('test')).to eq('pure-menu-selected') }
-    it { expect(view.status_selected_class('invalid')).to eq(nil) }
-  end
-
   describe '#complexity_label' do
     context 'for easy level' do
       let(:task) { Task.new(id: 1, complexity: 'easy') }
@@ -47,6 +41,58 @@ RSpec.describe Web::Views::Tasks::Index do
     context 'for hard level' do
       let(:task) { Task.new(id: 1, complexity: 'hard') }
       it { expect(view.complexity_label(task).to_s).to eq "<span class=\"level level-hard\">\nHARD\n</span>" }
+    end
+  end
+
+  describe '#select_tasks_by_status' do
+    context 'when tasks status is empty' do
+      let(:exposures) { { params: { }, current_user: User.new } }
+      it 'returns select form' do
+        expect(view.select_tasks_by_status.to_s).to eq "<select id=\"task-status-select\" @change=\"changeItem($event)\">\n" +
+          "<option value=\"in progress\" selected=\"selected\">Open</option>\n" +
+          "<option value=\"assigned\">Assigned</option>\n" +
+          "<option value=\"closed\">Closed</option>\n" +
+          "<option value=\"done\">Finished</option>\n" +
+        "</select>"
+      end
+    end
+
+    context 'when current user registered' do
+      let(:exposures) { { params: { }, current_user: User.new(id: 1) } }
+      it 'returns select form' do
+        expect(view.select_tasks_by_status.to_s).to eq "<select id=\"task-status-select\" @change=\"changeItem($event)\">\n" +
+          "<option value=\"in progress\" selected=\"selected\">Open</option>\n" +
+          "<option value=\"assigned\">Assigned</option>\n" +
+          "<option value=\"closed\">Closed</option>\n" +
+          "<option value=\"done\">Finished</option>\n" +
+          "<option value=\"moderation\">On moderation</option>\n" +
+        "</select>"
+      end
+    end
+
+    context 'when tasks status is closed' do
+      let(:exposures) { { params: { status: 'closed' }, current_user: User.new } }
+      it 'returns select form' do
+        expect(view.select_tasks_by_status.to_s).to eq "<select id=\"task-status-select\" @change=\"changeItem($event)\">\n" +
+          "<option value=\"in progress\">Open</option>\n" +
+          "<option value=\"assigned\">Assigned</option>\n" +
+          "<option value=\"closed\" selected=\"selected\">Closed</option>\n" +
+          "<option value=\"done\">Finished</option>\n" +
+        "</select>"
+      end
+    end
+
+    context 'when tasks status is closed and user registered' do
+      let(:exposures) { { params: { status: 'moderation' }, current_user: User.new(id: 1) } }
+      it 'returns select form' do
+        expect(view.select_tasks_by_status.to_s).to eq "<select id=\"task-status-select\" @change=\"changeItem($event)\">\n" +
+          "<option value=\"in progress\">Open</option>\n" +
+          "<option value=\"assigned\">Assigned</option>\n" +
+          "<option value=\"closed\">Closed</option>\n" +
+          "<option value=\"done\">Finished</option>\n" +
+          "<option value=\"moderation\" selected=\"selected\">On moderation</option>\n" +
+        "</select>"
+      end
     end
   end
 end

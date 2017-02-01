@@ -4,25 +4,11 @@
       = flash[:info]
 
   .tasks__actions
-    .pure-menu.pure-menu-horizontal
-      ul.pure-menu-list
-        - task_statuses.each do |status, text|
-          li.pure-menu-item class=status_selected_class(status)
-            a.pure-menu-link href=routes.tasks_path(status: status) = text
-        - if current_user.registred?
-          li.pure-menu-item class=status_selected_class('moderation')
-            a.pure-menu-link href=routes.tasks_path(status: 'moderation') On moderation
+    .tasks__status-selector
+      = select_tasks_by_status
 
     .tasks__new
       = link_to_new_task
-
-    /.tasks__search
-      form.pure-form.task-search action="#" method="post"
-        input.task-search__keyword type="text" name="keyword" placeholder="Keyword"
-        select.task-search__lang name="select"
-          - langs_list.each do |value, title|
-            option value=value = title
-        input.pure-button.pure-button-primary.task-search__submit type="submit" value="Search"
 
   .tasks__list
     - tasks.each do |task|
