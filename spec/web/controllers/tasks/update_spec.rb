@@ -11,7 +11,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
   after { repo.clear }
 
   context 'when user in not authenticated' do
-    let(:params) { { id: task.id, task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test' }, 'rack.session' => session } }
+    let(:params) { { id: task.id, task: { title: 'test', description: 'This is *bongos*, indeed.', lang: 'test' }, 'rack.session' => session } }
 
     it { expect(action.call(params)).to redirect_to("/tasks/#{task.id}") }
 
@@ -30,7 +30,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
   context 'when user authenticated and try to edit not its task' do
     let(:user) { Fabricate.create(:user, name: 'anton', login: 'test') }
     let(:task) { Fabricate.create(:task, title: 'title', user_id: user.id - 1) }
-    let(:params) { { id: task.id, task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test' }, 'rack.session' => session } }
+    let(:params) { { id: task.id, task: { title: 'test', description: 'This is *bongos*, indeed.', lang: 'test' }, 'rack.session' => session } }
 
     it { expect(action.call(params)).to redirect_to("/tasks/#{task.id}") }
 
@@ -49,7 +49,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
   context 'when user try to edit approved task' do
     let(:user) { Fabricate.create(:user, name: 'anton', login: 'test') }
     let(:task) { Fabricate.create(:task, title: 'title', user_id: user.id, approved: true) }
-    let(:params) { { id: task.id, task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test' }, 'rack.session' => session } }
+    let(:params) { { id: task.id, task: { title: 'test', description: 'This is *bongos*, indeed.', lang: 'test' }, 'rack.session' => session } }
 
     it { expect(action.call(params)).to redirect_to("/tasks/#{task.id}") }
 
@@ -75,7 +75,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
         {
           title: 'test',
           repository_name: 'Acme-Project',
-          md_body: 'This is *bongos*, indeed.',
+          description: 'This is *bongos*, indeed.',
           lang: 'test',
           user_id: user.id,
           issue_url: 'github.com/issue/1'
@@ -97,7 +97,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
         updated_task = repo.find(task.id)
         expect(updated_task.title).to eq 'test'
         expect(updated_task.repository_name).to eq 'Acme-Project'
-        expect(updated_task.md_body).to eq 'This is *bongos*, indeed.'
+        expect(updated_task.description).to eq 'This is *bongos*, indeed.'
         expect(updated_task.body).to eq "<p>This is <em>bongos</em>, indeed.</p>\n"
         expect(updated_task.issue_url).to eq 'github.com/issue/1'
       end
@@ -107,7 +107,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
           {
             title: 'test',
             repository_name: '',
-            md_body: 'This is *bongos*, indeed.',
+            description: 'This is *bongos*, indeed.',
             lang: 'test',
             user_id: user.id,
             issue_url: ''
@@ -119,7 +119,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
           updated_task = repo.find(task.id)
           expect(updated_task.title).to eq 'test'
           expect(updated_task.repository_name).to eq nil
-          expect(updated_task.md_body).to eq 'This is *bongos*, indeed.'
+          expect(updated_task.description).to eq 'This is *bongos*, indeed.'
           expect(updated_task.body).to eq "<p>This is <em>bongos</em>, indeed.</p>\n"
           expect(updated_task.issue_url).to eq nil
         end
@@ -133,7 +133,7 @@ RSpec.describe Web::Controllers::Tasks::Update do
 
       it { expect(action.call(params)).to have_http_status(200) }
       it { expect(action.call(params)).to match_in_body(/Title is missing/) }
-      it { expect(action.call(params)).to match_in_body(/Body is missing/) }
+      it { expect(action.call(params)).to match_in_body(/Description is missing/) }
 
       it 'does not update task' do
         action.call(params)

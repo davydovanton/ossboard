@@ -19,8 +19,8 @@ module Web::Views::Tasks
         end
 
         div class: 'input' do
-          text_area :md_body, task.md_body, placeholder: 'Body'
-          div(class: 'task-form__body-tip') do
+          text_area :description, task.description, placeholder: 'Description'
+          div(class: 'task-form__description-tip') do
             em '* you can use markdown syntax'
           end
         end

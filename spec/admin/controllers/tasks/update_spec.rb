@@ -14,7 +14,7 @@ RSpec.describe Admin::Controllers::Tasks::Update do
       {
         title: 'test',
         repository_name: 'Acme-Project',
-        md_body: 'This is *bongos*, indeed.',
+        description: 'This is *bongos*, indeed.',
         lang: 'ruby',
         assignee_username: 'davydovanton',
         complexity: 'medium',
@@ -32,7 +32,7 @@ RSpec.describe Admin::Controllers::Tasks::Update do
       task = repo.last
       expect(task.title).to eq 'test'
       expect(task.repository_name).to eq 'Acme-Project'
-      expect(task.md_body).to eq 'This is *bongos*, indeed.'
+      expect(task.description).to eq 'This is *bongos*, indeed.'
       expect(task.body).to eq "<p>This is <em>bongos</em>, indeed.</p>\n"
       expect(task.approved).to eq true
       expect(task.assignee_username).to eq 'davydovanton'
@@ -48,7 +48,7 @@ RSpec.describe Admin::Controllers::Tasks::Update do
         {
           title: 'test',
           repository_name: '',
-          md_body: 'This is *bongos*, indeed.',
+          description: 'This is *bongos*, indeed.',
           lang: 'ruby',
           complexity: 'medium',
           time_estimate: 'more than month',
@@ -65,7 +65,7 @@ RSpec.describe Admin::Controllers::Tasks::Update do
         task = repo.last
         expect(task.title).to eq 'test'
         expect(task.repository_name).to eq nil
-        expect(task.md_body).to eq 'This is *bongos*, indeed.'
+        expect(task.description).to eq 'This is *bongos*, indeed.'
         expect(task.body).to eq "<p>This is <em>bongos</em>, indeed.</p>\n"
         expect(task.approved).to eq true
         expect(task.lang).to eq 'ruby'

@@ -9,7 +9,7 @@ RSpec.describe GitlabIssueRequester, :vcr do
         data = subject.(params)
         expect(data[:html_url]).to eq 'https://gitlab.com/gitlab-org/gitlab-ce/issues/27371'
         expect(data[:title]).to eq "Set protected branches \"Allowed to push\" to \"No one\" via API"
-        expect(data[:body]).to match('To keep the API similar ')
+        expect(data[:description]).to match('To keep the API similar ')
         expect(data[:repository_name]).to eq 'GitLab Community Edition'
       end
     end

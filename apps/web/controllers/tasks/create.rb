@@ -1,26 +1,16 @@
+require_relative './create_params'
+
 module Web::Controllers::Tasks
   class Create
     include Web::Action
 
     expose :task
-
-    params do
-      required(:task).schema do
-        required(:title).filled(:str?)
-        required(:md_body).filled(:str?)
-        required(:lang).filled(:str?)
-        required(:complexity).filled(:str?)
-        required(:time_estimate).filled(:str?)
-        required(:user_id).filled
-        optional(:issue_url).maybe(:str?)
-        optional(:repository_name).maybe(:str?)
-      end
-    end
+    params CreateParams
 
     def call(params)
       if params.valid? && authenticated?
         task_params = params[:task]
-        task_params[:body] = Markdown.parse(task_params[:md_body])
+        task_params[:body] = Markdown.parse(task_params[:description])
         task_params[:status] = Task::VALID_STATUSES[:in_progress]
         task_params[:approved] = nil
 

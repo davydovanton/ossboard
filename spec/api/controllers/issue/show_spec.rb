@@ -24,7 +24,7 @@ RSpec.describe Api::Controllers::Issue::Show, :vcr do
     context 'when issue url is valid github' do
       let(:params) { { issue_url: 'https://github.com/hanami/hanami/issues/663' } }
       it { expect(subject).to match_in_body(/"title":/) }
-      it { expect(subject).to match_in_body(/"body":/) }
+      it { expect(subject).to match_in_body(/"description":/) }
       it { expect(subject).to match_in_body(/"html_url":/) }
       it { expect(subject).to match_in_body(/"lang":/) }
       it { expect(subject).to match_in_body(/"repository_name":/) }
@@ -44,7 +44,7 @@ RSpec.describe Api::Controllers::Issue::Show, :vcr do
     context 'when issue url is valid gitlab' do
       let(:params) { { issue_url: 'https://gitlab.com/gitlab-org/gitlab-ce/issues/27371' } }
       it { expect(subject).to match_in_body(/"title":/) }
-      it { expect(subject).to match_in_body(/"body":/) }
+      it { expect(subject).to match_in_body(/"description":/) }
       it { expect(subject).to match_in_body(/"html_url":/) }
       it { expect(subject).to match_in_body(/"repository_name":/) }
     end
