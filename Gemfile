@@ -70,6 +70,8 @@ group :test do
   gem 'faker'
   gem 'timecop'
   gem 'rspec-retry'
+  gem 'pry'
+  gem 'rb-readline'
 end
 
 group :production do
