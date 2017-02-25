@@ -14,6 +14,8 @@ RSpec.describe Api::Controllers::UserRepos::Show do
   end
 
   context 'when params valid' do
-    it { expect(subject).to be_success }
+    it "something" do
+      expect(subject).to be_success
+    end
   end
 end

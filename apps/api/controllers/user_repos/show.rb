@@ -7,6 +7,7 @@ module Api::Controllers::UserRepos
     end
 
     def call(params)
+      require 'pry'; binding.pry
       if params.valid?
         self.body = repos_page
       else
@@ -18,15 +19,15 @@ module Api::Controllers::UserRepos
     private
 
     def repos_page
-      repos = []
+      body = []
       page = 1
       loop do
         response = get_repos(page)
-        break if response.empty?
+        break if response == '[]'
         repos.push(response)
         page += 1
       end
-      return repos
+      return repos.join
     end
 
     def get_repos(page)
