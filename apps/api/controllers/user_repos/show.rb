@@ -23,7 +23,7 @@ module Api::Controllers::UserRepos
       loop do
         response = get_repos(page)
         break if response == '[]'
-        body.push(JSON.parse(response))
+        repos.push(JSON.parse(response))
         page += 1
       end
       return repos.flatten.to_json
