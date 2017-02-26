@@ -38,6 +38,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     ast (2.3.0)
     buftok (0.2.0)
+    byebug (9.0.6)
     capybara (2.12.1)
       addressable
       mime-types (>= 1.16)
@@ -383,6 +384,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   capybara
   connection_pool
   danger
