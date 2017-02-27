@@ -51,13 +51,9 @@ end
 
 group :test, :development do
   gem 'dotenv', '~> 2.0'
-
   gem 'danger'
   gem 'danger-rubocop'
   gem 'danger-simplecov_json'
-  gem 'pry'
-  gem 'rb-readline'
-  gem 'byebug'
 end
 
 group :test do
