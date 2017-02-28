@@ -1,0 +1,147 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/ossboard-org/ossboard/issues/11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 27 Feb 2017 01:07:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '52'
+      X-Ratelimit-Reset:
+      - '1488161118'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"37eec059b385d15626df300bbcb58057"
+      Last-Modified:
+      - Fri, 24 Feb 2017 10:38:02 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - dc1ce2bfb41810a06c705e83b388572d
+      X-Github-Request-Id:
+      - CFF4:73AA:E3FF41:10E4BCF:58B37BCC
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/ossboard-org/ossboard/issues/11","repository_url":"https://api.github.com/repos/ossboard-org/ossboard","labels_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/11/labels{/name}","comments_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/11/comments","events_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/11/events","html_url":"https://github.com/ossboard-org/ossboard/issues/11","id":197878391,"number":11,"title":"Update
+        design for web app","user":{"login":"davydovanton","id":1147484,"avatar_url":"https://avatars.githubusercontent.com/u/1147484?v=3","gravatar_id":"","url":"https://api.github.com/users/davydovanton","html_url":"https://github.com/davydovanton","followers_url":"https://api.github.com/users/davydovanton/followers","following_url":"https://api.github.com/users/davydovanton/following{/other_user}","gists_url":"https://api.github.com/users/davydovanton/gists{/gist_id}","starred_url":"https://api.github.com/users/davydovanton/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/davydovanton/subscriptions","organizations_url":"https://api.github.com/users/davydovanton/orgs","repos_url":"https://api.github.com/users/davydovanton/repos","events_url":"https://api.github.com/users/davydovanton/events{/privacy}","received_events_url":"https://api.github.com/users/davydovanton/received_events","type":"User","site_admin":false},"labels":[{"id":486967904,"url":"https://api.github.com/repos/ossboard-org/ossboard/labels/help%20wanted","name":"help
+        wanted","color":"128A0C","default":true},{"id":508364251,"url":"https://api.github.com/repos/ossboard-org/ossboard/labels/in%20progress","name":"in
+        progress","color":"fbca04","default":false}],"state":"open","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":36,"created_at":"2016-12-28T16:20:53Z","updated_at":"2017-01-31T12:03:26Z","closed_at":null,"body":"We
+        need to update mobile version and also will be awesome to improve UI for all
+        versions","closed_by":null}'
+    http_version: 
+  recorded_at: Mon, 27 Feb 2017 01:07:23 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/ossboard-org/ossboard
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 27 Feb 2017 01:07:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '51'
+      X-Ratelimit-Reset:
+      - '1488161118'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"c2beed9a805c569b4cf726c1596f50ee"
+      Last-Modified:
+      - Sat, 25 Feb 2017 05:43:58 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 318e55760cf7cdb40e61175a4d36cd32
+      X-Github-Request-Id:
+      - CFF5:73B2:2F6860D:3892929:58B37BCC
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":74514701,"name":"ossboard","full_name":"ossboard-org/ossboard","owner":{"login":"ossboard-org","id":25467649,"avatar_url":"https://avatars.githubusercontent.com/u/25467649?v=3","gravatar_id":"","url":"https://api.github.com/users/ossboard-org","html_url":"https://github.com/ossboard-org","followers_url":"https://api.github.com/users/ossboard-org/followers","following_url":"https://api.github.com/users/ossboard-org/following{/other_user}","gists_url":"https://api.github.com/users/ossboard-org/gists{/gist_id}","starred_url":"https://api.github.com/users/ossboard-org/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ossboard-org/subscriptions","organizations_url":"https://api.github.com/users/ossboard-org/orgs","repos_url":"https://api.github.com/users/ossboard-org/repos","events_url":"https://api.github.com/users/ossboard-org/events{/privacy}","received_events_url":"https://api.github.com/users/ossboard-org/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/ossboard-org/ossboard","description":"Public
+        board for oss issues and mentoring","fork":false,"url":"https://api.github.com/repos/ossboard-org/ossboard","forks_url":"https://api.github.com/repos/ossboard-org/ossboard/forks","keys_url":"https://api.github.com/repos/ossboard-org/ossboard/keys{/key_id}","collaborators_url":"https://api.github.com/repos/ossboard-org/ossboard/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/ossboard-org/ossboard/teams","hooks_url":"https://api.github.com/repos/ossboard-org/ossboard/hooks","issue_events_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/events{/number}","events_url":"https://api.github.com/repos/ossboard-org/ossboard/events","assignees_url":"https://api.github.com/repos/ossboard-org/ossboard/assignees{/user}","branches_url":"https://api.github.com/repos/ossboard-org/ossboard/branches{/branch}","tags_url":"https://api.github.com/repos/ossboard-org/ossboard/tags","blobs_url":"https://api.github.com/repos/ossboard-org/ossboard/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/ossboard-org/ossboard/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/ossboard-org/ossboard/git/refs{/sha}","trees_url":"https://api.github.com/repos/ossboard-org/ossboard/git/trees{/sha}","statuses_url":"https://api.github.com/repos/ossboard-org/ossboard/statuses/{sha}","languages_url":"https://api.github.com/repos/ossboard-org/ossboard/languages","stargazers_url":"https://api.github.com/repos/ossboard-org/ossboard/stargazers","contributors_url":"https://api.github.com/repos/ossboard-org/ossboard/contributors","subscribers_url":"https://api.github.com/repos/ossboard-org/ossboard/subscribers","subscription_url":"https://api.github.com/repos/ossboard-org/ossboard/subscription","commits_url":"https://api.github.com/repos/ossboard-org/ossboard/commits{/sha}","git_commits_url":"https://api.github.com/repos/ossboard-org/ossboard/git/commits{/sha}","comments_url":"https://api.github.com/repos/ossboard-org/ossboard/comments{/number}","issue_comment_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/comments{/number}","contents_url":"https://api.github.com/repos/ossboard-org/ossboard/contents/{+path}","compare_url":"https://api.github.com/repos/ossboard-org/ossboard/compare/{base}...{head}","merges_url":"https://api.github.com/repos/ossboard-org/ossboard/merges","archive_url":"https://api.github.com/repos/ossboard-org/ossboard/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/ossboard-org/ossboard/downloads","issues_url":"https://api.github.com/repos/ossboard-org/ossboard/issues{/number}","pulls_url":"https://api.github.com/repos/ossboard-org/ossboard/pulls{/number}","milestones_url":"https://api.github.com/repos/ossboard-org/ossboard/milestones{/number}","notifications_url":"https://api.github.com/repos/ossboard-org/ossboard/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/ossboard-org/ossboard/labels{/name}","releases_url":"https://api.github.com/repos/ossboard-org/ossboard/releases{/id}","deployments_url":"https://api.github.com/repos/ossboard-org/ossboard/deployments","created_at":"2016-11-22T21:26:08Z","updated_at":"2017-02-25T05:43:58Z","pushed_at":"2017-02-23T00:43:41Z","git_url":"git://github.com/ossboard-org/ossboard.git","ssh_url":"git@github.com:ossboard-org/ossboard.git","clone_url":"https://github.com/ossboard-org/ossboard.git","svn_url":"https://github.com/ossboard-org/ossboard","homepage":"http://www.ossboard.org","size":858,"stargazers_count":37,"watchers_count":37,"language":"Ruby","has_issues":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":21,"mirror_url":null,"open_issues_count":6,"forks":21,"open_issues":6,"watchers":37,"default_branch":"master","organization":{"login":"ossboard-org","id":25467649,"avatar_url":"https://avatars.githubusercontent.com/u/25467649?v=3","gravatar_id":"","url":"https://api.github.com/users/ossboard-org","html_url":"https://github.com/ossboard-org","followers_url":"https://api.github.com/users/ossboard-org/followers","following_url":"https://api.github.com/users/ossboard-org/following{/other_user}","gists_url":"https://api.github.com/users/ossboard-org/gists{/gist_id}","starred_url":"https://api.github.com/users/ossboard-org/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ossboard-org/subscriptions","organizations_url":"https://api.github.com/users/ossboard-org/orgs","repos_url":"https://api.github.com/users/ossboard-org/repos","events_url":"https://api.github.com/users/ossboard-org/events{/privacy}","received_events_url":"https://api.github.com/users/ossboard-org/received_events","type":"Organization","site_admin":false},"network_count":21,"subscribers_count":8}'
+    http_version: 
+  recorded_at: Mon, 27 Feb 2017 01:07:24 GMT
+recorded_with: VCR 3.0.3

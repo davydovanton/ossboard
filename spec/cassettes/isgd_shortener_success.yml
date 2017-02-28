@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://is.gd/create.php
+    body:
+      encoding: US-ASCII
+      string: format=simple&url=https%3A%2F%2Fexample.com
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 27 Feb 2017 01:07:22 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2edd9760bc5e1560356447fdad15bfd11488157642; expires=Tue, 27-Feb-18
+        01:07:22 GMT; path=/; domain=.is.gd; HttpOnly
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.16
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3377bd517914501d-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: https://is.gd/jGamH3
+    http_version: 
+  recorded_at: Mon, 27 Feb 2017 01:07:21 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v3/projects/gitlab-org%2Fgitlab-ce/issues/?iid=28059
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Private-Token:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 27 Feb 2017 01:07:25 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '30'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Request-Id:
+      - f179d841-5c1b-47bd-9c5f-5715f144885e
+      X-Runtime:
+      - '0.015352'
+    body:
+      encoding: UTF-8
+      string: '{"message":"401 Unauthorized"}'
+    http_version: 
+  recorded_at: Mon, 27 Feb 2017 01:07:25 GMT
+recorded_with: VCR 3.0.3

@@ -16,4 +16,14 @@ RSpec.describe Api::Controllers::UserRepos::Show do
   context 'when params valid' do
     it { expect(subject).to be_success }
   end
+
+  context 'user repositories come back as json' do
+    let(:repos) { subject[2][0] }
+    it { expect(repos.class).to eq(String) }
+  end
+
+  context 'user repositories are not paginated to 100' do
+    let(:repos_count) { JSON.parse(subject[2][0]).count }
+    it { expect(repos_count).to be > 100 }
+  end
 end

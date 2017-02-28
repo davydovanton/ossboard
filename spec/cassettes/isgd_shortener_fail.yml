@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://is.gd/create.php
+    body:
+      encoding: US-ASCII
+      string: format=simple&url=wrong+url
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 27 Feb 2017 01:07:22 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd49e8843b9eda547275e9be180a7982f1488157642; expires=Tue, 27-Feb-18
+        01:07:22 GMT; path=/; domain=.is.gd; HttpOnly
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.16
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3377bd5258e65011-DEN
+    body:
+      encoding: UTF-8
+      string: 'Error: Please enter a valid URL to shorten'
+    http_version: 
+  recorded_at: Mon, 27 Feb 2017 01:07:22 GMT
+recorded_with: VCR 3.0.3
