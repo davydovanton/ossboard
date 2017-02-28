@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 27 Feb 2017 01:07:22 GMT
+      - Thu, 02 Feb 2017 14:31:08 GMT
       Content-Type:
       - text/html
       Transfer-Encoding:
@@ -29,17 +29,17 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d2edd9760bc5e1560356447fdad15bfd11488157642; expires=Tue, 27-Feb-18
-        01:07:22 GMT; path=/; domain=.is.gd; HttpOnly
+      - __cfduid=d38de9f557394cd933af49563f0c4eaf21486045868; expires=Fri, 02-Feb-18
+        14:31:08 GMT; path=/; domain=.is.gd; HttpOnly
       X-Powered-By:
       - PHP/5.5.9-1ubuntu4.16
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3377bd517914501d-DEN
+      - 32ae58546fa016e2-ARN
     body:
       encoding: ASCII-8BIT
       string: https://is.gd/jGamH3
     http_version: 
-  recorded_at: Mon, 27 Feb 2017 01:07:21 GMT
+  recorded_at: Thu, 02 Feb 2017 14:31:08 GMT
 recorded_with: VCR 3.0.3

@@ -5,7 +5,7 @@ http_interactions:
     uri: https://is.gd/create.php
     body:
       encoding: US-ASCII
-      string: format=simple&url=http%3A%2F%2Fwww.ossboard.org%2Ftasks%2F2
+      string: format=simple&url=http%3A%2F%2Fwww.ossboard.org%2Ftasks%2F19442
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 27 Feb 2017 01:07:04 GMT
+      - Fri, 03 Feb 2017 00:37:24 GMT
       Content-Type:
       - text/html
       Transfer-Encoding:
@@ -29,17 +29,17 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d84c657b627ec02fef06d89c215e8cfba1488157624; expires=Tue, 27-Feb-18
-        01:07:04 GMT; path=/; domain=.is.gd; HttpOnly
+      - __cfduid=d8810fae148acb581e27008d9d484889c1486082243; expires=Sat, 03-Feb-18
+        00:37:23 GMT; path=/; domain=.is.gd; HttpOnly
       X-Powered-By:
       - PHP/5.5.9-1ubuntu4.16
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3377bcde1ff85005-DEN
+      - 32b1d06778f54ed2-DME
     body:
       encoding: ASCII-8BIT
-      string: https://is.gd/HQrTBm
+      string: https://is.gd/IE1hyR
     http_version: 
-  recorded_at: Mon, 27 Feb 2017 01:07:04 GMT
+  recorded_at: Fri, 03 Feb 2017 00:37:24 GMT
 recorded_with: VCR 3.0.3

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 27 Feb 2017 01:07:16 GMT
+      - Sat, 11 Feb 2017 18:29:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,18 +31,18 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '57'
+      - '59'
       X-Ratelimit-Reset:
-      - '1488161118'
+      - '1486841342'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
       - Accept
       - Accept-Encoding
       Etag:
-      - W/"eb96fc8533773f9ba99748c73105e2c0"
+      - W/"54f8e18ae9b6c47496798c3b6fe99909"
       Last-Modified:
-      - Sun, 26 Feb 2017 16:30:28 GMT
+      - Mon, 06 Feb 2017 06:01:30 GMT
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -61,17 +61,17 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - 02ea60dfed58b2a09106fafd6ca0c108
+      - 7efb7ae49588ef0269c6a1c1bd3721d9
       X-Github-Request-Id:
-      - CFE7:73B2:2F6814C:389236E:58B37BC4
+      - F762:7AE8:19C237F:20724A6:589F57EE
     body:
       encoding: ASCII-8BIT
       string: '{"url":"https://api.github.com/repos/ossboard-org/ossboard/issues/69","repository_url":"https://api.github.com/repos/ossboard-org/ossboard","labels_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/69/labels{/name}","comments_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/69/comments","events_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/69/events","html_url":"https://github.com/ossboard-org/ossboard/issues/69","id":204797097,"number":69,"title":"Footer
         has not fixed to page bottom","user":{"login":"FChaack","id":7114795,"avatar_url":"https://avatars.githubusercontent.com/u/7114795?v=3","gravatar_id":"","url":"https://api.github.com/users/FChaack","html_url":"https://github.com/FChaack","followers_url":"https://api.github.com/users/FChaack/followers","following_url":"https://api.github.com/users/FChaack/following{/other_user}","gists_url":"https://api.github.com/users/FChaack/gists{/gist_id}","starred_url":"https://api.github.com/users/FChaack/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/FChaack/subscriptions","organizations_url":"https://api.github.com/users/FChaack/orgs","repos_url":"https://api.github.com/users/FChaack/repos","events_url":"https://api.github.com/users/FChaack/events{/privacy}","received_events_url":"https://api.github.com/users/FChaack/received_events","type":"User","site_admin":false},"labels":[{"id":486967901,"url":"https://api.github.com/repos/ossboard-org/ossboard/labels/bug","name":"bug","color":"ee0701","default":true},{"id":509529150,"url":"https://api.github.com/repos/ossboard-org/ossboard/labels/easy","name":"easy","color":"c2e0c6","default":false},{"id":486967904,"url":"https://api.github.com/repos/ossboard-org/ossboard/labels/help%20wanted","name":"help
-        wanted","color":"128A0C","default":true}],"state":"closed","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":0,"created_at":"2017-02-02T06:57:25Z","updated_at":"2017-02-14T00:01:36Z","closed_at":"2017-02-14T00:01:36Z","body":"Currently,
-        for the big screen, footer has not fixed to page bottom.\r\n![footer](https://cloud.githubusercontent.com/assets/7114795/22539864/ed84b5e2-e92d-11e6-8490-1625f1a3b570.png)\r\n","closed_by":{"login":"davydovanton","id":1147484,"avatar_url":"https://avatars.githubusercontent.com/u/1147484?v=3","gravatar_id":"","url":"https://api.github.com/users/davydovanton","html_url":"https://github.com/davydovanton","followers_url":"https://api.github.com/users/davydovanton/followers","following_url":"https://api.github.com/users/davydovanton/following{/other_user}","gists_url":"https://api.github.com/users/davydovanton/gists{/gist_id}","starred_url":"https://api.github.com/users/davydovanton/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/davydovanton/subscriptions","organizations_url":"https://api.github.com/users/davydovanton/orgs","repos_url":"https://api.github.com/users/davydovanton/repos","events_url":"https://api.github.com/users/davydovanton/events{/privacy}","received_events_url":"https://api.github.com/users/davydovanton/received_events","type":"User","site_admin":false}}'
+        wanted","color":"128A0C","default":true}],"state":"open","locked":false,"assignee":null,"assignees":[],"milestone":null,"comments":0,"created_at":"2017-02-02T06:57:25Z","updated_at":"2017-02-02T11:08:21Z","closed_at":null,"body":"Currently,
+        for the big screen, footer has not fixed to page bottom.\r\n![footer](https://cloud.githubusercontent.com/assets/7114795/22539864/ed84b5e2-e92d-11e6-8490-1625f1a3b570.png)\r\n","closed_by":null}'
     http_version: 
-  recorded_at: Mon, 27 Feb 2017 01:07:16 GMT
+  recorded_at: Sat, 11 Feb 2017 18:29:01 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/ossboard-org/ossboard
@@ -93,7 +93,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Mon, 27 Feb 2017 01:07:16 GMT
+      - Sat, 11 Feb 2017 18:29:03 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -103,18 +103,18 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '56'
+      - '58'
       X-Ratelimit-Reset:
-      - '1488161118'
+      - '1486841342'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
       - Accept
       - Accept-Encoding
       Etag:
-      - W/"c2beed9a805c569b4cf726c1596f50ee"
+      - W/"41241fc4f0e381580e9fbb205fcd2672"
       Last-Modified:
-      - Sat, 25 Feb 2017 05:43:58 GMT
+      - Sun, 05 Feb 2017 09:31:26 GMT
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -133,13 +133,167 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - a51acaae89a7607fd7ee967627be18e4
+      - dc1ce2bfb41810a06c705e83b388572d
       X-Github-Request-Id:
-      - CFE8:73AA:E3FE0E:10E4A53:58B37BC4
+      - F763:7AE6:C4C586:F7E41A:589F57EE
     body:
       encoding: ASCII-8BIT
       string: '{"id":74514701,"name":"ossboard","full_name":"ossboard-org/ossboard","owner":{"login":"ossboard-org","id":25467649,"avatar_url":"https://avatars.githubusercontent.com/u/25467649?v=3","gravatar_id":"","url":"https://api.github.com/users/ossboard-org","html_url":"https://github.com/ossboard-org","followers_url":"https://api.github.com/users/ossboard-org/followers","following_url":"https://api.github.com/users/ossboard-org/following{/other_user}","gists_url":"https://api.github.com/users/ossboard-org/gists{/gist_id}","starred_url":"https://api.github.com/users/ossboard-org/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ossboard-org/subscriptions","organizations_url":"https://api.github.com/users/ossboard-org/orgs","repos_url":"https://api.github.com/users/ossboard-org/repos","events_url":"https://api.github.com/users/ossboard-org/events{/privacy}","received_events_url":"https://api.github.com/users/ossboard-org/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/ossboard-org/ossboard","description":"Public
-        board for oss issues and mentoring","fork":false,"url":"https://api.github.com/repos/ossboard-org/ossboard","forks_url":"https://api.github.com/repos/ossboard-org/ossboard/forks","keys_url":"https://api.github.com/repos/ossboard-org/ossboard/keys{/key_id}","collaborators_url":"https://api.github.com/repos/ossboard-org/ossboard/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/ossboard-org/ossboard/teams","hooks_url":"https://api.github.com/repos/ossboard-org/ossboard/hooks","issue_events_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/events{/number}","events_url":"https://api.github.com/repos/ossboard-org/ossboard/events","assignees_url":"https://api.github.com/repos/ossboard-org/ossboard/assignees{/user}","branches_url":"https://api.github.com/repos/ossboard-org/ossboard/branches{/branch}","tags_url":"https://api.github.com/repos/ossboard-org/ossboard/tags","blobs_url":"https://api.github.com/repos/ossboard-org/ossboard/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/ossboard-org/ossboard/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/ossboard-org/ossboard/git/refs{/sha}","trees_url":"https://api.github.com/repos/ossboard-org/ossboard/git/trees{/sha}","statuses_url":"https://api.github.com/repos/ossboard-org/ossboard/statuses/{sha}","languages_url":"https://api.github.com/repos/ossboard-org/ossboard/languages","stargazers_url":"https://api.github.com/repos/ossboard-org/ossboard/stargazers","contributors_url":"https://api.github.com/repos/ossboard-org/ossboard/contributors","subscribers_url":"https://api.github.com/repos/ossboard-org/ossboard/subscribers","subscription_url":"https://api.github.com/repos/ossboard-org/ossboard/subscription","commits_url":"https://api.github.com/repos/ossboard-org/ossboard/commits{/sha}","git_commits_url":"https://api.github.com/repos/ossboard-org/ossboard/git/commits{/sha}","comments_url":"https://api.github.com/repos/ossboard-org/ossboard/comments{/number}","issue_comment_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/comments{/number}","contents_url":"https://api.github.com/repos/ossboard-org/ossboard/contents/{+path}","compare_url":"https://api.github.com/repos/ossboard-org/ossboard/compare/{base}...{head}","merges_url":"https://api.github.com/repos/ossboard-org/ossboard/merges","archive_url":"https://api.github.com/repos/ossboard-org/ossboard/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/ossboard-org/ossboard/downloads","issues_url":"https://api.github.com/repos/ossboard-org/ossboard/issues{/number}","pulls_url":"https://api.github.com/repos/ossboard-org/ossboard/pulls{/number}","milestones_url":"https://api.github.com/repos/ossboard-org/ossboard/milestones{/number}","notifications_url":"https://api.github.com/repos/ossboard-org/ossboard/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/ossboard-org/ossboard/labels{/name}","releases_url":"https://api.github.com/repos/ossboard-org/ossboard/releases{/id}","deployments_url":"https://api.github.com/repos/ossboard-org/ossboard/deployments","created_at":"2016-11-22T21:26:08Z","updated_at":"2017-02-25T05:43:58Z","pushed_at":"2017-02-23T00:43:41Z","git_url":"git://github.com/ossboard-org/ossboard.git","ssh_url":"git@github.com:ossboard-org/ossboard.git","clone_url":"https://github.com/ossboard-org/ossboard.git","svn_url":"https://github.com/ossboard-org/ossboard","homepage":"http://www.ossboard.org","size":858,"stargazers_count":37,"watchers_count":37,"language":"Ruby","has_issues":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":21,"mirror_url":null,"open_issues_count":6,"forks":21,"open_issues":6,"watchers":37,"default_branch":"master","organization":{"login":"ossboard-org","id":25467649,"avatar_url":"https://avatars.githubusercontent.com/u/25467649?v=3","gravatar_id":"","url":"https://api.github.com/users/ossboard-org","html_url":"https://github.com/ossboard-org","followers_url":"https://api.github.com/users/ossboard-org/followers","following_url":"https://api.github.com/users/ossboard-org/following{/other_user}","gists_url":"https://api.github.com/users/ossboard-org/gists{/gist_id}","starred_url":"https://api.github.com/users/ossboard-org/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ossboard-org/subscriptions","organizations_url":"https://api.github.com/users/ossboard-org/orgs","repos_url":"https://api.github.com/users/ossboard-org/repos","events_url":"https://api.github.com/users/ossboard-org/events{/privacy}","received_events_url":"https://api.github.com/users/ossboard-org/received_events","type":"Organization","site_admin":false},"network_count":21,"subscribers_count":8}'
+        board for oss issues and mentoring","fork":false,"url":"https://api.github.com/repos/ossboard-org/ossboard","forks_url":"https://api.github.com/repos/ossboard-org/ossboard/forks","keys_url":"https://api.github.com/repos/ossboard-org/ossboard/keys{/key_id}","collaborators_url":"https://api.github.com/repos/ossboard-org/ossboard/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/ossboard-org/ossboard/teams","hooks_url":"https://api.github.com/repos/ossboard-org/ossboard/hooks","issue_events_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/events{/number}","events_url":"https://api.github.com/repos/ossboard-org/ossboard/events","assignees_url":"https://api.github.com/repos/ossboard-org/ossboard/assignees{/user}","branches_url":"https://api.github.com/repos/ossboard-org/ossboard/branches{/branch}","tags_url":"https://api.github.com/repos/ossboard-org/ossboard/tags","blobs_url":"https://api.github.com/repos/ossboard-org/ossboard/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/ossboard-org/ossboard/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/ossboard-org/ossboard/git/refs{/sha}","trees_url":"https://api.github.com/repos/ossboard-org/ossboard/git/trees{/sha}","statuses_url":"https://api.github.com/repos/ossboard-org/ossboard/statuses/{sha}","languages_url":"https://api.github.com/repos/ossboard-org/ossboard/languages","stargazers_url":"https://api.github.com/repos/ossboard-org/ossboard/stargazers","contributors_url":"https://api.github.com/repos/ossboard-org/ossboard/contributors","subscribers_url":"https://api.github.com/repos/ossboard-org/ossboard/subscribers","subscription_url":"https://api.github.com/repos/ossboard-org/ossboard/subscription","commits_url":"https://api.github.com/repos/ossboard-org/ossboard/commits{/sha}","git_commits_url":"https://api.github.com/repos/ossboard-org/ossboard/git/commits{/sha}","comments_url":"https://api.github.com/repos/ossboard-org/ossboard/comments{/number}","issue_comment_url":"https://api.github.com/repos/ossboard-org/ossboard/issues/comments{/number}","contents_url":"https://api.github.com/repos/ossboard-org/ossboard/contents/{+path}","compare_url":"https://api.github.com/repos/ossboard-org/ossboard/compare/{base}...{head}","merges_url":"https://api.github.com/repos/ossboard-org/ossboard/merges","archive_url":"https://api.github.com/repos/ossboard-org/ossboard/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/ossboard-org/ossboard/downloads","issues_url":"https://api.github.com/repos/ossboard-org/ossboard/issues{/number}","pulls_url":"https://api.github.com/repos/ossboard-org/ossboard/pulls{/number}","milestones_url":"https://api.github.com/repos/ossboard-org/ossboard/milestones{/number}","notifications_url":"https://api.github.com/repos/ossboard-org/ossboard/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/ossboard-org/ossboard/labels{/name}","releases_url":"https://api.github.com/repos/ossboard-org/ossboard/releases{/id}","deployments_url":"https://api.github.com/repos/ossboard-org/ossboard/deployments","created_at":"2016-11-22T21:26:08Z","updated_at":"2017-02-05T09:31:26Z","pushed_at":"2017-02-10T01:42:25Z","git_url":"git://github.com/ossboard-org/ossboard.git","ssh_url":"git@github.com:ossboard-org/ossboard.git","clone_url":"https://github.com/ossboard-org/ossboard.git","svn_url":"https://github.com/ossboard-org/ossboard","homepage":"http://www.ossboard.org","size":825,"stargazers_count":29,"watchers_count":29,"language":"Ruby","has_issues":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":20,"mirror_url":null,"open_issues_count":6,"forks":20,"open_issues":6,"watchers":29,"default_branch":"master","organization":{"login":"ossboard-org","id":25467649,"avatar_url":"https://avatars.githubusercontent.com/u/25467649?v=3","gravatar_id":"","url":"https://api.github.com/users/ossboard-org","html_url":"https://github.com/ossboard-org","followers_url":"https://api.github.com/users/ossboard-org/followers","following_url":"https://api.github.com/users/ossboard-org/following{/other_user}","gists_url":"https://api.github.com/users/ossboard-org/gists{/gist_id}","starred_url":"https://api.github.com/users/ossboard-org/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ossboard-org/subscriptions","organizations_url":"https://api.github.com/users/ossboard-org/orgs","repos_url":"https://api.github.com/users/ossboard-org/repos","events_url":"https://api.github.com/users/ossboard-org/events{/privacy}","received_events_url":"https://api.github.com/users/ossboard-org/received_events","type":"Organization","site_admin":false},"network_count":20,"subscribers_count":8}'
     http_version: 
-  recorded_at: Mon, 27 Feb 2017 01:07:16 GMT
+  recorded_at: Sat, 11 Feb 2017 18:29:01 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/hanami/hanami/issues/663
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 11 Feb 2017 18:36:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '55'
+      X-Ratelimit-Reset:
+      - '1486841342'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"a076e70a4c4d3029fe94ad9be331d9f6"
+      Last-Modified:
+      - Sat, 11 Feb 2017 14:38:21 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 5aeb3f30c9e3ef6ef7bcbcddfd9a68f7
+      X-Github-Request-Id:
+      - F774:7AEA:2A42AFF:350CC79:589F59CA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/hanami/hanami/issues/663","repository_url":"https://api.github.com/repos/hanami/hanami","labels_url":"https://api.github.com/repos/hanami/hanami/issues/663/labels{/name}","comments_url":"https://api.github.com/repos/hanami/hanami/issues/663/comments","events_url":"https://api.github.com/repos/hanami/hanami/issues/663/events","html_url":"https://github.com/hanami/hanami/issues/663","id":188814461,"number":663,"title":"Format
+        resolving and Template lookup","user":{"login":"mereghost","id":10281,"avatar_url":"https://avatars.githubusercontent.com/u/10281?v=3","gravatar_id":"","url":"https://api.github.com/users/mereghost","html_url":"https://github.com/mereghost","followers_url":"https://api.github.com/users/mereghost/followers","following_url":"https://api.github.com/users/mereghost/following{/other_user}","gists_url":"https://api.github.com/users/mereghost/gists{/gist_id}","starred_url":"https://api.github.com/users/mereghost/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mereghost/subscriptions","organizations_url":"https://api.github.com/users/mereghost/orgs","repos_url":"https://api.github.com/users/mereghost/repos","events_url":"https://api.github.com/users/mereghost/events{/privacy}","received_events_url":"https://api.github.com/users/mereghost/received_events","type":"User","site_admin":false},"labels":[{"id":51404909,"url":"https://api.github.com/repos/hanami/hanami/labels/bug","name":"bug","color":"fc2929","default":true}],"state":"closed","locked":false,"assignee":{"login":"jodosha","id":5089,"avatar_url":"https://avatars.githubusercontent.com/u/5089?v=3","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false},"assignees":[{"login":"jodosha","id":5089,"avatar_url":"https://avatars.githubusercontent.com/u/5089?v=3","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false}],"milestone":{"url":"https://api.github.com/repos/hanami/hanami/milestones/18","html_url":"https://github.com/hanami/hanami/milestone/18","labels_url":"https://api.github.com/repos/hanami/hanami/milestones/18/labels","id":2129213,"number":18,"title":"v1.0.0.beta1","description":"","creator":{"login":"jodosha","id":5089,"avatar_url":"https://avatars.githubusercontent.com/u/5089?v=3","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false},"open_issues":0,"closed_issues":32,"state":"open","created_at":"2016-11-11T11:59:51Z","updated_at":"2017-02-11T14:38:21Z","due_on":null,"closed_at":null},"comments":9,"created_at":"2016-11-11T17:51:18Z","updated_at":"2017-01-21T15:33:51Z","closed_at":"2017-01-21T15:33:51Z","body":"As
+        was reported on Gitter, requests that are made with a `Content-Type` of `text/plain`
+        get resolved to the `:conf` format and consequently a `.txt` template is never
+        used.\r\n\r\nThat happens because we use `Rack::Mime::MIME_TYPES.key(mime_type)`
+        [(see here)](https://github.com/hanami/controller/blob/master/lib/hanami/action/mime.rb#L486)
+        which returns only the first match. The same problem can happen for a bunch
+        of other types (around 40) and we never detected this problem because we skipped
+        those cases on purpose on the tests [(see here)](https://github.com/hanami/controller/blob/master/test/action/format_test.rb#L85)\r\n\r\nMaking
+        it work is kinda of a huge change. Why? For that to work we''d need to make
+        `Hanami::Action#format` an `Array` or make `Hanami::View` (specially the template
+        finder) MIME aware and make it look for the first template file it finds with
+        the possible extensions.\r\n\r\nThat would warrant changes in `view`, `controller`
+        and possibly `hanami`, and that brings me here. I''m willing to work at it
+        but I''d like some input from the hanami members on the best way to tackle
+        this.","closed_by":{"login":"AlfonsoUceda","id":925961,"avatar_url":"https://avatars.githubusercontent.com/u/925961?v=3","gravatar_id":"","url":"https://api.github.com/users/AlfonsoUceda","html_url":"https://github.com/AlfonsoUceda","followers_url":"https://api.github.com/users/AlfonsoUceda/followers","following_url":"https://api.github.com/users/AlfonsoUceda/following{/other_user}","gists_url":"https://api.github.com/users/AlfonsoUceda/gists{/gist_id}","starred_url":"https://api.github.com/users/AlfonsoUceda/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/AlfonsoUceda/subscriptions","organizations_url":"https://api.github.com/users/AlfonsoUceda/orgs","repos_url":"https://api.github.com/users/AlfonsoUceda/repos","events_url":"https://api.github.com/users/AlfonsoUceda/events{/privacy}","received_events_url":"https://api.github.com/users/AlfonsoUceda/received_events","type":"User","site_admin":false}}'
+    http_version: 
+  recorded_at: Sat, 11 Feb 2017 18:36:58 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/hanami/hanami
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 11 Feb 2017 18:36:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '54'
+      X-Ratelimit-Reset:
+      - '1486841342'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"7911f7117c9c199bb657b832e064343b"
+      Last-Modified:
+      - Sat, 11 Feb 2017 18:21:10 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - a7f8a126c9ed3f1c4715a34c0ddc7290
+      X-Github-Request-Id:
+      - F775:7AE6:C4F518:F821E6:589F59CB
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":12004006,"name":"hanami","full_name":"hanami/hanami","owner":{"login":"hanami","id":3210273,"avatar_url":"https://avatars.githubusercontent.com/u/3210273?v=3","gravatar_id":"","url":"https://api.github.com/users/hanami","html_url":"https://github.com/hanami","followers_url":"https://api.github.com/users/hanami/followers","following_url":"https://api.github.com/users/hanami/following{/other_user}","gists_url":"https://api.github.com/users/hanami/gists{/gist_id}","starred_url":"https://api.github.com/users/hanami/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/hanami/subscriptions","organizations_url":"https://api.github.com/users/hanami/orgs","repos_url":"https://api.github.com/users/hanami/repos","events_url":"https://api.github.com/users/hanami/events{/privacy}","received_events_url":"https://api.github.com/users/hanami/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/hanami/hanami","description":"The
+        web, with simplicity.","fork":false,"url":"https://api.github.com/repos/hanami/hanami","forks_url":"https://api.github.com/repos/hanami/hanami/forks","keys_url":"https://api.github.com/repos/hanami/hanami/keys{/key_id}","collaborators_url":"https://api.github.com/repos/hanami/hanami/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/hanami/hanami/teams","hooks_url":"https://api.github.com/repos/hanami/hanami/hooks","issue_events_url":"https://api.github.com/repos/hanami/hanami/issues/events{/number}","events_url":"https://api.github.com/repos/hanami/hanami/events","assignees_url":"https://api.github.com/repos/hanami/hanami/assignees{/user}","branches_url":"https://api.github.com/repos/hanami/hanami/branches{/branch}","tags_url":"https://api.github.com/repos/hanami/hanami/tags","blobs_url":"https://api.github.com/repos/hanami/hanami/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/hanami/hanami/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/hanami/hanami/git/refs{/sha}","trees_url":"https://api.github.com/repos/hanami/hanami/git/trees{/sha}","statuses_url":"https://api.github.com/repos/hanami/hanami/statuses/{sha}","languages_url":"https://api.github.com/repos/hanami/hanami/languages","stargazers_url":"https://api.github.com/repos/hanami/hanami/stargazers","contributors_url":"https://api.github.com/repos/hanami/hanami/contributors","subscribers_url":"https://api.github.com/repos/hanami/hanami/subscribers","subscription_url":"https://api.github.com/repos/hanami/hanami/subscription","commits_url":"https://api.github.com/repos/hanami/hanami/commits{/sha}","git_commits_url":"https://api.github.com/repos/hanami/hanami/git/commits{/sha}","comments_url":"https://api.github.com/repos/hanami/hanami/comments{/number}","issue_comment_url":"https://api.github.com/repos/hanami/hanami/issues/comments{/number}","contents_url":"https://api.github.com/repos/hanami/hanami/contents/{+path}","compare_url":"https://api.github.com/repos/hanami/hanami/compare/{base}...{head}","merges_url":"https://api.github.com/repos/hanami/hanami/merges","archive_url":"https://api.github.com/repos/hanami/hanami/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/hanami/hanami/downloads","issues_url":"https://api.github.com/repos/hanami/hanami/issues{/number}","pulls_url":"https://api.github.com/repos/hanami/hanami/pulls{/number}","milestones_url":"https://api.github.com/repos/hanami/hanami/milestones{/number}","notifications_url":"https://api.github.com/repos/hanami/hanami/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/hanami/hanami/labels{/name}","releases_url":"https://api.github.com/repos/hanami/hanami/releases{/id}","deployments_url":"https://api.github.com/repos/hanami/hanami/deployments","created_at":"2013-08-09T15:24:44Z","updated_at":"2017-02-11T18:21:10Z","pushed_at":"2017-02-11T15:10:31Z","git_url":"git://github.com/hanami/hanami.git","ssh_url":"git@github.com:hanami/hanami.git","clone_url":"https://github.com/hanami/hanami.git","svn_url":"https://github.com/hanami/hanami","homepage":"http://hanamirb.org","size":24980,"stargazers_count":3561,"watchers_count":3561,"language":"Ruby","has_issues":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":351,"mirror_url":null,"open_issues_count":5,"forks":351,"open_issues":5,"watchers":3561,"default_branch":"master","organization":{"login":"hanami","id":3210273,"avatar_url":"https://avatars.githubusercontent.com/u/3210273?v=3","gravatar_id":"","url":"https://api.github.com/users/hanami","html_url":"https://github.com/hanami","followers_url":"https://api.github.com/users/hanami/followers","following_url":"https://api.github.com/users/hanami/following{/other_user}","gists_url":"https://api.github.com/users/hanami/gists{/gist_id}","starred_url":"https://api.github.com/users/hanami/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/hanami/subscriptions","organizations_url":"https://api.github.com/users/hanami/orgs","repos_url":"https://api.github.com/users/hanami/repos","events_url":"https://api.github.com/users/hanami/events{/privacy}","received_events_url":"https://api.github.com/users/hanami/received_events","type":"Organization","site_admin":false},"network_count":351,"subscribers_count":181}'
+    http_version: 
+  recorded_at: Sat, 11 Feb 2017 18:36:58 GMT
 recorded_with: VCR 3.0.3

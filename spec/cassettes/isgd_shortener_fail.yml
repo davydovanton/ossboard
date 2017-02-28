@@ -21,7 +21,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Mon, 27 Feb 2017 01:07:22 GMT
+      - Thu, 02 Feb 2017 14:33:07 GMT
       Content-Type:
       - text/html
       Transfer-Encoding:
@@ -29,17 +29,17 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dd49e8843b9eda547275e9be180a7982f1488157642; expires=Tue, 27-Feb-18
-        01:07:22 GMT; path=/; domain=.is.gd; HttpOnly
+      - __cfduid=d29dd97050c5963ecc640fe5bbc0510e61486045987; expires=Fri, 02-Feb-18
+        14:33:07 GMT; path=/; domain=.is.gd; HttpOnly
       X-Powered-By:
       - PHP/5.5.9-1ubuntu4.16
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3377bd5258e65011-DEN
+      - 32ae5b3e0de216b2-ARN
     body:
       encoding: UTF-8
       string: 'Error: Please enter a valid URL to shorten'
     http_version: 
-  recorded_at: Mon, 27 Feb 2017 01:07:22 GMT
+  recorded_at: Thu, 02 Feb 2017 14:33:07 GMT
 recorded_with: VCR 3.0.3
