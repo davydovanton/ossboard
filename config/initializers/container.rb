@@ -17,4 +17,9 @@ class Container
   register :markdown do
     ->(text) { Markdown.parse(text) }
   end
+
+  register :redis do
+    uri = URI.parse(ENV.fetch("REDISTOGO_URL"))
+    ConnectionPool.new(size: 10, timeout: 3) { Redis.new(driver: :hiredis, host: uri.host, port: uri.port, password: uri.password) }
+  end
 end

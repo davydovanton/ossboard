@@ -31,6 +31,10 @@ VCR.configure do |c|
   c.default_cassette_options = { record: :new_episodes }
 end
 
+Container.register(:redis) do
+  ConnectionPool.new(size: 10, timeout: 3) { MockRedis.new }
+end
+
 require 'rspec/hanami'
 require 'sidekiq/testing'
 Sidekiq::Testing.fake!
