@@ -28,6 +28,6 @@ RSpec.describe TaskTwitter do
   end
 
   it "#twitter_client returs a twitter client" do
-    expect(TWITTER_CLIENT).to be_a(Twitter::REST::Client)
+    expect(Container[:twitter]).to be_a(Twitter::REST::Client)
   end
 end

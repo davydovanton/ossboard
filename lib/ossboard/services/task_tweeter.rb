@@ -19,7 +19,7 @@ class TaskTwitter < Service::Base
 
   def tweet(text)
     return text unless Hanami.env?(:production)
-    TWITTER_CLIENT.update(text)
+    Container[:twitter].update(text)
   end
 
   # Keep extra 5 symbols for spaces and ...

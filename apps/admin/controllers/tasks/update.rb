@@ -24,7 +24,7 @@ module Admin::Controllers::Tasks
 
       if @task && params.valid?
         task_params = params[:task]
-        task_params[:body] = Markdown.parse(task_params[:md_body])
+        task_params[:body] = Container[:markdown].call(task_params[:md_body])
 
         repo.update(@task.id, task_params)
         redirect_to routes.task_path(task.id)
