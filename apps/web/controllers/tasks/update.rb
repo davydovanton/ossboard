@@ -46,7 +46,7 @@ module Web::Controllers::Tasks
 
     def task_params(params)
       task_params = params[:task]
-      task_params[:body] = Markdown.parse(task_params[:md_body])
+      task_params[:body] = Container[:markdown].call(task_params[:md_body])
       task_params
     end
   end
