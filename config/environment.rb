@@ -34,7 +34,7 @@ Hanami.configure do
     migrations 'db/migrations'
     schema     'db/schema.sql'
 
-    logger "log/development.log", level: :debug
+    logger "log/#{Hanami.env}.log", level: :debug
   end
 
   mailer do
