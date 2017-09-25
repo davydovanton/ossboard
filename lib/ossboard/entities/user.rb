@@ -13,7 +13,6 @@ class User < Hanami::Entity
     attribute :created_at_day, Types::Date
 
     attribute :tasks,    Types::Collection(Task)
-    attribute :points,   Types::Collection(Point)
     attribute :repos,    Types::Collection(Repo)
     attribute :accounts, Types::Collection(Account)
   end
