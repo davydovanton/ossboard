@@ -89,23 +89,4 @@ RSpec.describe UserRepository do
     it { expect(subject.tasks).to be_a Array }
     it { expect(subject.tasks.count).to eq 1 }
   end
-
-  describe '#all_with_points_and_tasks' do
-    let(:task_repo) { TaskRepository.new }
-
-    let(:user) { Fabricate.create(:user, uuid: 'test') }
-
-    before do
-      Fabricate.create(:task, title: 'bad', user_id: user.id )
-      Fabricate.create(:task, title: 'good', approved: true)
-    end
-
-    subject { repo.all_with_points_and_tasks }
-
-    it { expect(subject).to be_a Array }
-
-    it { expect(subject[0]).to be_a User }
-    it { expect(subject[0].points).to be_a Array }
-    it { expect(subject[0].tasks).to be_a Array }
-  end
 end

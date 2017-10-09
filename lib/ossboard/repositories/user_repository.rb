@@ -3,7 +3,6 @@ class UserRepository < Hanami::Repository
     has_many :tasks
     has_many :accounts
     has_many :repos
-    has_many :points
   end
 
   def admins
@@ -33,10 +32,6 @@ class UserRepository < Hanami::Repository
 
   def find_with_tasks(id)
     aggregate(:tasks).where(id: id).map_to(User).one
-  end
-
-  def all_with_points_and_tasks
-    aggregate(:points, :tasks).map_to(User).to_a
   end
 
   private

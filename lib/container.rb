@@ -4,7 +4,7 @@ require 'dry-auto_inject'
 %w[markdown http_request].each { |file| require_relative "ossboard/core/#{file}" }
 
 %w[
-  analytic_reporter url_shortener points_calculator task_tweeter
+  analytic_reporter url_shortener task_tweeter
 ].each { |file| require_relative "ossboard/services/#{file}" }
 
 require_relative 'tasks/matchers/git_host'
@@ -19,7 +19,6 @@ class Container
 
   namespace('services') do
     register('analytic_reporter', Services::AnalyticReporter.new)
-    register('points_calculator', Services::PointsCalculator.new)
     register('task_twitter', Services::TaskTwitter.new)
     register('url_shortener', Services::UrlShortener.new)
   end
