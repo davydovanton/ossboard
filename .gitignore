@@ -1,5 +1,6 @@
 /public/assets*
 /public/*
+/Gemfile.lock
 /tmp
 /node_modules
 /coverage

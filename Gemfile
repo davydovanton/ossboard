@@ -53,7 +53,7 @@ group :development do
 
   # gem 'hanami-scaffold', github: 'davydovanton/hanami-scaffold'
 
-  gem 'rack-mini-profiler', require: false
+  gem 'rack-mini-profiler', '0.9.9', require: false
   gem 'memory_profiler'
 end
 
@@ -72,6 +72,7 @@ group :test do
   gem 'rspec'
   gem 'rspec-hanami', github: 'davydovanton/rspec-hanami'
   gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'poltergeist'
   gem 'simplecov', require: false
   gem 'simplecov-json', require: false

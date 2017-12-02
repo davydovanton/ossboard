@@ -45,7 +45,7 @@ module TasksPageHelper
 
 end
 
-RSpec.describe 'Tasks page', type: :feature, js: true do
+RSpec.describe 'Tasks page', type: :feature do
 
   include TasksPageHelper
 
@@ -57,30 +57,29 @@ RSpec.describe 'Tasks page', type: :feature, js: true do
     let!(:finished_task) { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'done', time_estimate: 'more than month', comlexity: 'easy') }
     let(:repo) { UserRepository.new }
 
-    before(:each) { visit '/tasks' }
-
     it 'status filter in default position "Open"' do
+      visit '/tasks'
       expect_task(open_task)
     end
 
     it 'status filter in position "Assigned"' do
-      find('#task-status-select').select 'Assigned'
+      visit '/tasks?status=assigned'
       expect_task(assigned_task)
     end
 
     it 'status filter in position "Closed"' do
-      find('#task-status-select').select 'Closed'
+      visit '/tasks?status=closed'
       expect_task(closed_task)
     end
 
     it 'status filter in position "Finished"' do
-      find('#task-status-select').select 'Finished'
+      visit '/tasks?status=done'
       expect_task(finished_task)
     end
 
   end
 
-  describe '#new' do
+  describe '#new', js: true do
 
     before(:each) { visit '/tasks/new' }
 
