@@ -21,4 +21,5 @@
           .task-item__title = link_to_task(task)
           = author_information(task.author, task)
         .task-item__estimate Estimated time: #{task.time_estimate}
+        .task-item__first-pr = first_pr_label(task)
         .task-item__complexity = complexity_label(task)

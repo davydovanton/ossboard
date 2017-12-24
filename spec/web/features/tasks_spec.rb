@@ -41,6 +41,8 @@ module TasksPageHelper
     expect(page).to have_css('a[href="/users/' + task.author.login + '"]', text: task.author.name)
     expect(page).to have_css('.task-item__estimate', text: 'Estimated time: ' + task.time_estimate)
     expect(page).to have_css(".task-item__complexity > .level-#{task.complexity}", text: task.complexity.upcase)
+    expect(page).to have_css(".task-item__first-pr > .first-pr", text: 'first PR')
+
   end
 
 end
@@ -51,10 +53,10 @@ RSpec.describe 'Tasks page', type: :feature do
 
   describe '#index' do
 
-    let!(:open_task)     { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'in progress', time_estimate: 'few days', comlexity: 'easy') }
-    let!(:assigned_task) { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'assigned', time_estimate: 'more than a week', comlexity: 'medium') }
-    let!(:closed_task)   { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'closed', time_estimate: 'more than two weeks', comlexity: 'hard') }
-    let!(:finished_task) { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'done', time_estimate: 'more than month', comlexity: 'easy') }
+    let!(:open_task)     { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'in progress', time_estimate: 'few days', comlexity: 'easy', first_pr: true) }
+    let!(:assigned_task) { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'assigned', time_estimate: 'more than a week', comlexity: 'medium', first_pr: true) }
+    let!(:closed_task)   { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'closed', time_estimate: 'more than two weeks', comlexity: 'hard', first_pr: true) }
+    let!(:finished_task) { Fabricate.create(:task, user_id: Fabricate.create(:user).id, approved: true, status: 'done', time_estimate: 'more than month', comlexity: 'easy', first_pr: true) }
     let(:repo) { UserRepository.new }
 
     it 'status filter in default position "Open"' do

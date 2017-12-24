@@ -36,6 +36,10 @@ class TaskRepository < Hanami::Repository
     tasks.where(assignee_username: user.login).order { id.desc }.map_to(Task).to_a
   end
 
+  def for_first_pr
+    tasks.where(first_pr: true).order { id.desc }.map_to(Task).to_a
+  end
+
   private
 
   def all_from_date_request(from, status = nil)

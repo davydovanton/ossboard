@@ -14,6 +14,7 @@ class Task < Hanami::Entity
     attribute :time_estimate,     Types::String
     attribute :assignee_username, Types::String
     attribute :approved,          Types::Bool
+    attribute :first_pr,          Types::Bool
     attribute :created_at,        Types::Time
     attribute :updated_at,        Types::Time
     attribute :created_at_day,    Types::Date

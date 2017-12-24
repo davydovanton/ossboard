@@ -15,6 +15,7 @@ module Web::Controllers::Tasks
         required(:user_id).filled
         optional(:issue_url).maybe(:str?)
         optional(:repository_name).maybe(:str?)
+        optional(:first_pr).filled(:bool?)
       end
     end
 

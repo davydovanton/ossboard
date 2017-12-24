@@ -45,6 +45,11 @@ module Web::Views::Tasks
       html.span(class: "level level-#{task.complexity}") { text(task.complexity.upcase) }
     end
 
+    def first_pr_label(task)
+      return unless task.first_pr
+      html.span(class: "first-pr") { text('first PR') }
+    end
+
     def select_tasks_by_status
       html.select(id: "task-status-select", '@change': "changeStatus($event)") do
         task_statuses.each { |status, text| option(text, value: status, selected: status == tasks_status) }

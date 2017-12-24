@@ -6,7 +6,8 @@ RSpec.describe Web::Controllers::Tasks::Create do
   let(:session) { { current_user: User.new(id: 1, login: 'test') } }
 
   describe 'when user in not authenticated' do
-    let(:params) { { task: { title: 'test', md_body: 'This is *bongos*, indeed.', lang: 'test', complexity: 'easy' } } }
+    let(:params) { { task: { title: 'test', md_body: 'This is *bongos*, indeed.',
+                             lang: 'test', complexity: 'easy', first_pr: true } } }
 
     it { expect(action.call(params)).to have_http_status(200) }
 
@@ -27,6 +28,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
         complexity: 'easy',
         time_estimate: 'few days',
         user_id: user.id,
+        first_pr: true,
         issue_url: 'github.com/issue/1'
       }
     end
@@ -55,6 +57,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
       expect(task.issue_url).to eq 'github.com/issue/1'
       expect(task.status).to eq 'in progress'
       expect(task.approved).to eq nil
+      expect(task.first_pr).to eq true
     end
 
     context 'when issue url and repository name empty' do
@@ -67,6 +70,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
           complexity: 'easy',
           time_estimate: 'few days',
           user_id: user.id,
+          first_pr: false,
           issue_url: ''
         }
       end
@@ -84,6 +88,7 @@ RSpec.describe Web::Controllers::Tasks::Create do
         expect(task.time_estimate).to eq 'few days'
         expect(task.status).to eq 'in progress'
         expect(task.approved).to eq nil
+        expect(task.first_pr).to eq false
       end
     end
   end

@@ -80,5 +80,10 @@ module Web::Views::Tasks
     def complexity_label
       html.span(class: "level level-#{task.complexity}") { text(task.complexity.upcase) }
     end
+
+    def first_pr_label
+      return unless task.first_pr
+      html.span(class: "first-pr") { text('first PR') }
+    end
   end
 end

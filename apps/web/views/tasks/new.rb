@@ -86,6 +86,11 @@ module Web::Views::Tasks
         end
 
         if current_user.registred?
+          div class: 'input first-pr-checkbox' do
+            check_box :first_pr, id: 'first-pr-checkbox'
+            label 'This task good for first PR', for: 'first-pr-checkbox', class: 'first-pr-label'
+          end
+
           div class: 'input agree-checkbox' do
             check_box :aprove, id: 'agreement-checkbox'
             label 'I agree to be a mentor to the developer that’s willing to work on my project’s task', for: 'agreement-checkbox', class: 'agreement-label'

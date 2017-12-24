@@ -9,4 +9,5 @@ Fabricator(:task) do
   lang            'ruby'
   complexity      'easy'
   status          'in progress'
+  first_pr        true
 end

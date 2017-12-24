@@ -193,7 +193,14 @@
     line-height: 55px;
   }
 
-  .task-item__estimate {
+ .task-item__first-pr {
+   width: 150px;
+   line-height: 55px;
+   position: relative;
+   left: 5em;
+ }
+
+.task-item__estimate {
     width: 265px;
     font-size: 16px;
     color: #9E9E9E;
@@ -243,6 +250,10 @@
 
     .task__complexity {
       margin: auto 0;
+    }
+
+    .task__first-pr {
+      margin: auto 0 auto 20em;
     }
   }
 
@@ -456,11 +467,11 @@
       margin: 5px 10px 0 0;
     }
 
-    .agreement-label {
+    .agreement-label, .first-pr-label {
       display: inline;
     }
 
-    .agree-checkbox {
+    .agree-checkbox, .first-pr-checkbox {
       margin: 1em 0 0;
 
       input {
