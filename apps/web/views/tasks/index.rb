@@ -1,6 +1,7 @@
 module Web::Views::Tasks
   class Index
     include Web::View
+    include Hanami::Pagination::View
 
     def title
       'OSSBoard: tasks'
@@ -76,5 +77,85 @@ module Web::Views::Tasks
         text(" • #{task.lang}")
       end
     end
+
+    def pagination
+      html.div(class: 'pagination') do
+
+       if pager.prev_page.nil?
+         span(class: 'disabled previous_page')
+           text '← Previous'
+       else
+         a(href: page_url(pager.prev_page) + '&status=' + params[:status]) do
+           text '← Previous'
+         end
+       end
+
+       total_pages = pager.all_pages.count
+
+       first_in_range = pager.pages_range.first
+
+       if 1 < first_in_range
+         a(href: page_url(1) + '&status=' + params[:status]) do
+           1
+         end
+       end
+
+       if 2 < first_in_range
+         a(href: page_url(2) + '&status=' + params[:status]) do
+           2
+         end
+       end
+
+       if 1 < first_in_range || 2 < first_in_range
+         span(class: 'gap') do
+           text '...'
+         end
+       end
+
+       pager.pages_range.each do |page_number|
+
+        if pager.current_page?(page_number)
+          em(class: 'current') do
+            text page_number
+          end
+         else
+           a(href: page_url(page_number) + '&status=' + params[:status]) do
+             page_number
+           end
+        end
+
+       end
+
+       last_in_range =  pager.pages_range[-1]
+
+       if last_in_range < total_pages
+         span(class: 'gap') do
+           text '...'
+         end
+
+         if last_in_range != total_pages-1
+           a(href: page_url(total_pages-1) + '&status=' + params[:status]) do
+             total_pages-1
+           end
+         end
+
+         a(href: page_url(total_pages) + '&status=' + params[:status]) do
+           total_pages
+         end
+
+       end
+
+       if pager.next_page.nil?
+         span(class: 'disabled next_page')
+         text 'Next →'
+       else
+         a(href: page_url(pager.next_page) + '&status=' + params[:status]) do
+           text 'Next →'
+         end
+       end
+
+      end
+    end
+
   end
 end

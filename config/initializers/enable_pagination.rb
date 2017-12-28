@@ -1,0 +1,1 @@
+TaskRepository.enable_pagination!

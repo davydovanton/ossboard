@@ -29,7 +29,7 @@ class TaskRepository < Hanami::Repository
   end
 
   def find_by(params = {})
-    tasks.where(params).order { id.desc }.map_to(Task).to_a
+    tasks.where(params).order { id.desc }.map_to(Task)
   end
 
   def assigned_tasks_for_user(user)

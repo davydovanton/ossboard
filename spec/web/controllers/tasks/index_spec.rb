@@ -155,6 +155,41 @@ RSpec.describe Web::Controllers::Tasks::Index do
           expect(action.tasks.map(&:status)).to all(eq('in progress'))
         end
       end
+
+      context 'when are on the first page' do
+        let(:params) { { lang: 'ruby', status: 'done', page: 1} }
+
+        before do
+          8.times { |i| Fabricate.create(:task, title: "title ##{i}", approved: true, status: 'done',        lang: 'ruby') }
+          action.call(params)
+        end
+
+        it 'returns 10 tasks on page' do
+
+          expect(action.tasks).to all(be_a(Task))
+          expect(action.tasks.count).to eq 10
+          expect(action.tasks.map(&:status)).to all(eq('done'))
+        end
+
+      end
+
+      context 'when are on the second page' do
+        let(:params) { { lang: 'ruby', status: 'done', page: 2} }
+
+        before do
+          8.times { |i| Fabricate.create(:task, title: "title ##{i}", approved: true, status: 'done',        lang: 'ruby') }
+          action.call(params)
+        end
+
+        it 'returns 1 task on page' do
+          expect(action.tasks).to all(be_a(Task))
+          expect(action.tasks.count).to eq 1
+          expect(action.tasks.map(&:status)).to all(eq('done'))
+        end
+
+      end
+
+
     end
   end
 end

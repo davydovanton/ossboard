@@ -32,6 +32,7 @@ gem 'slim'
 gem 'hanami-webpack', github: 'samuelsimoes/hanami-webpack'
 gem 'sass'
 gem 'relative_time'
+gem 'hanami-pagination'
 
 gem 'hanami-serializer', github: 'davydovanton/hanami-serializer'
 
