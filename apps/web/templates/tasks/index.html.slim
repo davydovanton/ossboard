@@ -12,7 +12,7 @@
 
     #pagination
       - if pager.all_pages.count > 1
-        = pagination
+        = paginate(:tasks)
 
     .tasks__new
       - if current_user.registred?

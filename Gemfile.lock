@@ -7,6 +7,14 @@ GIT
       newrelic_rpm
 
 GIT
+  remote: https://github.com/davydovanton/hanami-pagination.git
+  revision: fe0079b9a00898a4133a6ca982c1f893fd0b843f
+  specs:
+    hanami-pagination (0.1.0)
+      hanami-helpers (~> 1.1)
+      hanami-model (~> 1.0)
+
+GIT
   remote: https://github.com/davydovanton/hanami-serializer.git
   revision: d5f10ef199a73fd5816c01d8dd66d13115e00212
   specs:
@@ -192,8 +200,6 @@ GEM
       rom (~> 3.3, >= 3.3.3)
       rom-repository (~> 1.4)
       rom-sql (~> 1.3, >= 1.3.5)
-    hanami-pagination (0.1.0)
-      hanami-model (~> 1.0)
     hanami-router (1.1.0)
       hanami-utils (~> 1.1)
       http_router (= 0.11.2)
@@ -444,7 +450,7 @@ DEPENDENCIES
   hanami (= 1.1.0)
   hanami-fabrication
   hanami-model (= 1.1.0)
-  hanami-pagination
+  hanami-pagination!
   hanami-serializer!
   hanami-webpack!
   hiredis

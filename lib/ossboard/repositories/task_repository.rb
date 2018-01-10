@@ -29,6 +29,10 @@ class TaskRepository < Hanami::Repository
   end
 
   def find_by(params = {})
+    search_relation(params).to_a
+  end
+
+  def search_relation(params)
     tasks.where(params).order { id.desc }.map_to(Task)
   end
 

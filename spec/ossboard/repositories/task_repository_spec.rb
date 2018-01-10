@@ -10,7 +10,7 @@ RSpec.describe TaskRepository do
 
     context 'when params is empty' do
       it 'returns array of closed tasks' do
-        result = repo.find_by(approved: true).to_a
+        result = repo.find_by(approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 3
       end
@@ -18,7 +18,7 @@ RSpec.describe TaskRepository do
 
     context 'when status is closed' do
       it 'returns array of closed tasks' do
-        result = repo.find_by(status: 'closed', approved: true).to_a
+        result = repo.find_by(status: 'closed', approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 1
         expect(result.first.status).to eq 'closed'
@@ -27,7 +27,7 @@ RSpec.describe TaskRepository do
 
     context 'when status is done' do
       it 'returns array of done tasks' do
-        result = repo.find_by(status: 'done', approved: true).to_a
+        result = repo.find_by(status: 'done', approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 1
         expect(result.first.status).to eq 'done'
@@ -36,7 +36,7 @@ RSpec.describe TaskRepository do
 
     context 'when status is in progress' do
       it 'returns array of in progress tasks' do
-        result = repo.find_by(status: 'in progress', approved: true).to_a
+        result = repo.find_by(status: 'in progress', approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 1
         expect(result.first.status).to eq 'in progress'
@@ -45,7 +45,7 @@ RSpec.describe TaskRepository do
 
     context 'when lang is ruby' do
       it 'returns array of ruby language tasks' do
-        result = repo.find_by(lang: 'ruby', approved: true).to_a
+        result = repo.find_by(lang: 'ruby', approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 1
         expect(result.first.lang).to eq 'ruby'
@@ -54,7 +54,7 @@ RSpec.describe TaskRepository do
 
     context 'when lang is haskell' do
       it 'returns array of haskell language tasks' do
-        result = repo.find_by(lang: 'haskell', approved: true).to_a
+        result = repo.find_by(lang: 'haskell', approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 1
         expect(result.first.lang).to eq 'haskell'
@@ -63,7 +63,7 @@ RSpec.describe TaskRepository do
 
     context 'when lang is unknown' do
       it 'returns array of unknown language tasks' do
-        result = repo.find_by(lang: 'unknown', approved: true).to_a
+        result = repo.find_by(lang: 'unknown', approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 1
         expect(result.first.lang).to eq 'unknown'
@@ -72,7 +72,7 @@ RSpec.describe TaskRepository do
 
     context 'when status is in progress and lang is ruby' do
       it 'returns array of in progress, ruby tasks' do
-        result = repo.find_by(status: 'in progress', lang: 'ruby', approved: true).to_a
+        result = repo.find_by(status: 'in progress', lang: 'ruby', approved: true)
         expect(result).to all(be_a(Task))
         expect(result.count).to eq 1
         expect(result.first.lang).to eq 'ruby'

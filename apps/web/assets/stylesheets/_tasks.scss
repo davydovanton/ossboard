@@ -548,11 +548,11 @@
   text-align: center;
   padding: 0.3em;
   cursor: default; }
-.pagination a, .pagination span, .pagination em {
+.pagination a, .pagination span {
   padding: 0.2em 0.5em; }
 .pagination .disabled {
   color: #aaaaaa; }
-.pagination .current {
+.pagination .pagination-current-page {
   font-style: normal;
   font-weight: bold;
   color: red; }
@@ -564,12 +564,9 @@
   border-color: #003366;
   background: #214CFD;
   color: white; }
-.pagination .page_info {
-  color: #aaaaaa;
-  padding-top: 0.8em; }
-.pagination .previous_page, .pagination .next_page {
+.pagination .pagination-previous-page, .pagination .pagination-next-page {
   border-width: 2px; }
-.pagination .previous_page {
+.pagination .pagination-previous-page {
   margin-right: 1em; }
-.pagination .next_page {
+.pagination .pagination-next-page {
   margin-left: 1em; }

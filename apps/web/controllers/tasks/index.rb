@@ -5,8 +5,8 @@ module Web::Controllers::Tasks
     expose :tasks
 
     def call(params)
-      repo = TaskRepository.new.find_by(search_params)
-      @tasks = all_for_page(repo)
+      relation = TaskRepository.new.search_relation(search_params)
+      @tasks = all_for_page(relation)
     end
 
   private
@@ -33,7 +33,7 @@ module Web::Controllers::Tasks
     end
 
     def limit
-      10
+      50
     end
   end
 end
