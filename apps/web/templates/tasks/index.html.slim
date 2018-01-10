@@ -10,6 +10,10 @@
       .tasks__language-selector
         = select_tasks_by_language
 
+    #pagination
+      - if pager.all_pages.count > 1
+        = paginate(:tasks)
+
     .tasks__new
       - if current_user.registred?
         = link_to_new_task

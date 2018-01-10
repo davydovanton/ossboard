@@ -1,6 +1,7 @@
 module Web::Views::Tasks
   class Index
     include Web::View
+    include Hanami::Pagination::View
 
     def title
       'OSSBoard: tasks'

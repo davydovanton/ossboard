@@ -543,3 +543,30 @@
     margin: 0 -10px -7px;
   }
 }
+
+.pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+.pagination a, .pagination span {
+  padding: 0.2em 0.5em; }
+.pagination .disabled {
+  color: #aaaaaa; }
+.pagination .pagination-current-page {
+  font-style: normal;
+  font-weight: bold;
+  color: red; }
+.pagination a {
+  border: 1px solid #dddddd;
+  color: #214CFD;
+  text-decoration: none; }
+.pagination a:hover, .pagination a:focus {
+  border-color: #003366;
+  background: #214CFD;
+  color: white; }
+.pagination .pagination-previous-page, .pagination .pagination-next-page {
+  border-width: 2px; }
+.pagination .pagination-previous-page {
+  margin-right: 1em; }
+.pagination .pagination-next-page {
+  margin-left: 1em; }

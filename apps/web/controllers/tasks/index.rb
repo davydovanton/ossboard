@@ -1,10 +1,12 @@
 module Web::Controllers::Tasks
   class Index
     include Web::Action
+    include Hanami::Pagination::Action
     expose :tasks
 
     def call(params)
-      @tasks = TaskRepository.new.find_by(search_params)
+      relation = TaskRepository.new.search_relation(search_params)
+      @tasks = all_for_page(relation)
     end
 
   private
@@ -28,6 +30,10 @@ module Web::Controllers::Tasks
 
     def status
       Task::VALID_STATUSES.values.include?(params[:status]) ? params[:status] : 'in progress'
+    end
+
+    def limit
+      50
     end
   end
 end
