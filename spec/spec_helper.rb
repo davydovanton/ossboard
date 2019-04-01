@@ -3,7 +3,7 @@ ENV['HANAMI_ENV'] ||= 'test'
 
 require 'simplecov'
 require 'simplecov-json'
-require "support/database_cleaner"
+require 'support/database_cleaner'
 
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
@@ -33,6 +33,8 @@ VCR.configure do |c|
 end
 
 require 'rspec/hanami'
+require 'capybara-screenshot/rspec'
+
 require 'sidekiq/testing'
 Sidekiq::Testing.fake!
 
